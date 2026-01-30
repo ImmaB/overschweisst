@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b7hladk2xbimf"]
 
+[ext_resource type="Material" uid="uid://be3bw88ru6smv" path="res://M_Base_Test.tres" id="1_ju5k5"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_vcqsd"]
+[ext_resource type="PackedScene" uid="uid://jwek3t3337q6" path="res://gear.glb" id="3_dnqks"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -160,6 +162,7 @@ shape = SubResource("BoxShape3D_ju5k5")
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="Schollen" unique_id=2116697815]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5208144, 3.5762787e-07, 4.3969164)
 mesh = SubResource("BoxMesh_c1xds")
+surface_material_override/0 = ExtResource("1_ju5k5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D12" unique_id=1589645551]
 
@@ -224,12 +227,21 @@ shape = SubResource("BoxShape3D_dwb87")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2511644, -1.1920929e-07, 2.6274397)
 mesh = SubResource("BoxMesh_8n4b1")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D4" unique_id=1933265385]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D4/StaticBody3D" unique_id=1094056858]
+shape = SubResource("BoxShape3D_b4m2c")
+
 [node name="Player" parent="." unique_id=751799812 instance=ExtResource("1_vcqsd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6885159, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=11270234]
 transform = Transform3D(0.78099877, -0.51866066, 0.34789658, 0, 0.5570512, 0.8304782, -0.6245326, -0.6486024, 0.43505627, 3.0043309, 6.483244, 3.7570157)
-[node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D4" unique_id=1933265385]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D4/StaticBody3D" unique_id=1094056858]
-shape = SubResource("BoxShape3D_b4m2c")
+[node name="gear" parent="." unique_id=1152344367 instance=ExtResource("3_dnqks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7528214, 0, 5.7656384)
+
+[node name="Gear_001" parent="gear" index="0" unique_id=1730220036]
+surface_material_override/0 = ExtResource("1_ju5k5")
+
+[editable path="gear"]

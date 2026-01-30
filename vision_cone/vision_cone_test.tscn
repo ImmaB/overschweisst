@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ct4qciaa3jeou"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4rmie"]
+top_radius = 4.0
+bottom_radius = 0.2
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2uuy"]
+shading_mode = 0
+specular_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="VisionConeTest" type="Node3D" unique_id=1376990631]
+
+[node name="Cone" type="MeshInstance3D" parent="." unique_id=1748676654]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -2)
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("CylinderMesh_4rmie")
+surface_material_override/0 = SubResource("StandardMaterial3D_h2uuy")

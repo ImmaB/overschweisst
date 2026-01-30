@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://b7hladk2xbimf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vcqsd"]
+sky_material = SubResource("ProceduralSkyMaterial_e6tlm")
+
+[sub_resource type="Environment" id="Environment_642bm"]
+background_mode = 2
+sky = SubResource("Sky_vcqsd")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e6tlm"]
+size = Vector2(50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju5k5"]
+albedo_color = Color(0.5, 0.099999994, 0.099999994, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vcqsd"]
+resource_local_to_scene = true
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_642bm"]
+resource_local_to_scene = true
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ju5k5"]
+resource_local_to_scene = true
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dnqks"]
+resource_local_to_scene = true
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c1xds"]
+resource_local_to_scene = true
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l33tl"]
+resource_local_to_scene = true
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xbla5"]
+resource_local_to_scene = true
+size = Vector3(0.5, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t4tfw"]
+resource_local_to_scene = true
+size = Vector3(0.5, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0coly"]
+resource_local_to_scene = true
+size = Vector3(0.5, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dwb87"]
+resource_local_to_scene = true
+size = Vector3(0.5, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b4m2c"]
+size = Vector3(0.5, 1, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8n4b1"]
+resource_local_to_scene = true
+size = Vector3(1, 0.5, 2)
+
+[node name="Block River" type="Node" unique_id=854464559]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
+environment = SubResource("Environment_642bm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1870084777]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="Node3D" parent="." unique_id=1197936061]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=250777798]
+mesh = SubResource("PlaneMesh_e6tlm")
+surface_material_override/0 = SubResource("StandardMaterial3D_ju5k5")
+
+[node name="Schollen" type="Node3D" parent="." unique_id=1726990912]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Schollen" unique_id=685807559]
+mesh = SubResource("BoxMesh_vcqsd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Schollen" unique_id=216125284]
+mesh = SubResource("BoxMesh_642bm")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Schollen" unique_id=308740022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4372602, -1.1920929e-07, 0.42627597)
+mesh = SubResource("BoxMesh_ju5k5")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Schollen" unique_id=770514020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0989947, -1.1920929e-07, -2.1159894)
+mesh = SubResource("BoxMesh_dnqks")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Schollen" unique_id=2116697815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5208144, 3.5762787e-07, 4.3969164)
+mesh = SubResource("BoxMesh_c1xds")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Schollen" unique_id=1860119812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.90973425, -5.9604645e-07, 2.1177151)
+mesh = SubResource("BoxMesh_l33tl")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Schollen" unique_id=2072472870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054043055, 0, -2.6576355)
+mesh = SubResource("BoxMesh_xbla5")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Schollen" unique_id=482448124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0891294, 0, -3.013972)
+mesh = SubResource("BoxMesh_t4tfw")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Schollen" unique_id=166255224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0650425, 4.7683716e-07, -0.18383956)
+mesh = SubResource("BoxMesh_0coly")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Schollen" unique_id=967327847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0925736, 9.536743e-07, 3.411125)
+mesh = SubResource("BoxMesh_dwb87")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Schollen" unique_id=227015253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0018845, 0, -2.7811947)
+mesh = SubResource("BoxMesh_b4m2c")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Schollen" unique_id=767577846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2511644, -1.1920929e-07, 2.6274397)
+mesh = SubResource("BoxMesh_8n4b1")

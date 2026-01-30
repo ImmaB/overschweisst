@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b3qfhr268u4yy"]
 
+[ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms/platform_2x_1.tscn" id="1_h8nvo"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -174,7 +176,7 @@ mesh = SubResource("BoxMesh_l33tl")
 shape = SubResource("BoxShape3D_c1xds")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Schollen" unique_id=2072472870]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054043055, 0, -2.6576355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60714555, 0, -5.136348)
 mesh = SubResource("BoxMesh_xbla5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D6" unique_id=674584667]
@@ -210,7 +212,7 @@ mesh = SubResource("BoxMesh_dwb87")
 shape = SubResource("BoxShape3D_0coly")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Schollen" unique_id=227015253]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0018845, 0, -2.7811947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3091621, 0, -4.5019536)
 mesh = SubResource("BoxMesh_b4m2c")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D2" unique_id=1680069290]
@@ -226,3 +228,10 @@ mesh = SubResource("BoxMesh_8n4b1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D4/StaticBody3D" unique_id=1094056858]
 shape = SubResource("BoxShape3D_b4m2c")
+
+[node name="platform_2x1" parent="Schollen" unique_id=1993294131 instance=ExtResource("1_h8nvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2215387, 0, -7.597251)
+linear_velocity = Vector3(0, 0, 1)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=467133295]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.9786538, 9.605153, -2.185408)

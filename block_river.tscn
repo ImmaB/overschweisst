@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b7hladk2xbimf"]
 
+[ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_vcqsd"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -130,3 +132,9 @@ mesh = SubResource("BoxMesh_b4m2c")
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Schollen" unique_id=767577846]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2511644, -1.1920929e-07, 2.6274397)
 mesh = SubResource("BoxMesh_8n4b1")
+
+[node name="Player" parent="." unique_id=751799812 instance=ExtResource("1_vcqsd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6885159, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=11270234]
+transform = Transform3D(0.78099877, -0.51866066, 0.34789658, 0, 0.5570512, 0.8304782, -0.6245326, -0.6486024, 0.43505627, 3.0043309, 6.483244, 3.7570157)

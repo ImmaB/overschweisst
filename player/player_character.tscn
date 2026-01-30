@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b7o4bqvjfedt2"]
+
+[ext_resource type="PackedScene" uid="uid://ct4qciaa3jeou" path="res://player/vision_cone.tscn" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://dgju88uaiqdp5" path="res://player/player_controller.gd" id="2_rkbax"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+
+[node name="PlayerCharacter" type="CharacterBody3D" unique_id=751799812]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=986994085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_sh265")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="VisionConeTest" parent="." unique_id=1376990631 instance=ExtResource("1_oul6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5573387, 0)
+
+[node name="PlayerController" type="Node" parent="." unique_id=648838875]
+script = ExtResource("2_rkbax")

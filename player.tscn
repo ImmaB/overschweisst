@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c0drotw5pbuor"]
+
+[ext_resource type="Script" uid="uid://dgju88uaiqdp5" path="res://player/player_controller.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dfnx68jdv7t7l" path="res://player/player_character.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://ct4qciaa3jeou" path="res://player/vision_cone.tscn" id="3_i3pqv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+
+[node name="Player" type="CharacterBody3D" unique_id=751799812]
+script = ExtResource("1_onrkg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=986994085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_sh265")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="PlayerController" type="Node3D" parent="." unique_id=1428831514 node_paths=PackedStringArray("controlled_player")]
+script = ExtResource("1_4flbx")
+controlled_player = NodePath("..")
+
+[node name="VisionConeTest" parent="." unique_id=1376990631 instance=ExtResource("3_i3pqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5515116, 0)

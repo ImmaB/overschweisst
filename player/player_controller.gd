@@ -24,7 +24,7 @@ func _input(event):
 
 func _handle_movement_input():
 	var move_input: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
-	if move_input.length() > 0:
+	if move_input.length_squared() > 0:
 		var camera = get_viewport().get_camera_3d()
 		if not camera:
 			return

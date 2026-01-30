@@ -6,6 +6,8 @@ extends CharacterBody3D
 @export var aerial_control_factor: float = 0.5
 @export var acceleration: float = 10.0
 
+var _gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
+
 var _move_direction: Vector2
 
 func set_movement(direction: Vector2) -> void:
@@ -16,11 +18,11 @@ func _physics_process(delta: float) -> void:
     var movement := _calc_movement(_move_direction, on_floor)
     var velocity_x := move_toward(velocity.x, movement.x, acceleration * delta)
     var velocity_z := move_toward(velocity.z, movement.y, acceleration * delta)
-    velocity = Vector3(velocity_x, velocity.y, velocity_z)
+    velocity = Vector3(velocity_x, velocity.y, velocity_z) if on_floor else velocity + _gravity * delta
     move_and_slide()
 
 func _calc_movement(move_direction: Vector2, on_floor: bool) -> Vector2:
-    if not move_direction.length_squared() > 0.01: return Vector2.ZERO
+    if move_direction.length_squared() < 0.01: return Vector2.ZERO
     var movement = move_direction * movement_speed
     if not on_floor:
         movement *= aerial_control_factor

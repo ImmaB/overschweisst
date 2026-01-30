@@ -13,6 +13,9 @@ var _move_direction: Vector2
 func set_movement(direction: Vector2) -> void:
     _move_direction = direction.normalized() if direction.length_squared() > 1.0 else direction
 
+func stop_movement() -> void:
+    _move_direction = Vector2.ZERO
+
 func _physics_process(delta: float) -> void:
     var on_floor := is_on_floor()
     var movement := _calc_movement(_move_direction, on_floor)

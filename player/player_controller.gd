@@ -32,4 +32,5 @@ func _handle_movement_input():
 		var movement := move_input.rotated(-camera_y_rotation)
 		controlled_player.set_movement(movement)
 	else:
-		controlled_player.velocity = Vector3.ZERO
+		controlled_player.stop_movement()
+		

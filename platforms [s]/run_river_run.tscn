@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3qfhr268u4yy"]
 
-[ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms/platform_2x_1.tscn" id="1_h8nvo"]
+[ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -105,6 +105,8 @@ size = Vector3(1, 0.5, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b4m2c"]
 size = Vector3(1, 0.5, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8nvo"]
 
 [node name="Run River Run" type="Node" unique_id=854464559]
 
@@ -229,9 +231,19 @@ mesh = SubResource("BoxMesh_8n4b1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D4/StaticBody3D" unique_id=1094056858]
 shape = SubResource("BoxShape3D_b4m2c")
 
-[node name="platform_2x1" parent="Schollen" unique_id=1993294131 instance=ExtResource("1_h8nvo")]
+[node name="platform_2x1" parent="Schollen" unique_id=1993294131 instance=ExtResource("1_pcawa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2215387, 0, -7.597251)
 linear_velocity = Vector3(0, 0, 1)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=467133295]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.9786538, 9.605153, -2.185408)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1187250749]
+gravity_space_override = 3
+gravity_point_center = Vector3(0, 0, 1)
+gravity_direction = Vector3(0, 0, 1)
+gravity = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=271216069]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
+shape = SubResource("BoxShape3D_h8nvo")

@@ -19,8 +19,6 @@ func _input(event):
 	if Input.is_action_just_released("weld"):
 		stop_welding.emit()
 		pass
-		
-		
 
 func _handle_movement_input():
 	var move_input: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
@@ -31,6 +29,7 @@ func _handle_movement_input():
 		var camera_y_rotation = camera.global_transform.basis.get_euler().y
 		var movement := move_input.rotated(-camera_y_rotation)
 		controlled_player.set_movement(movement)
+		controlled_player.set_look_direction(movement)
 	else:
 		controlled_player.stop_movement()
 		

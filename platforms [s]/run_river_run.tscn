@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dvjr5lri1v8gy" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
+[ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -108,3 +109,10 @@ shape = SubResource("BoxShape3D_ju5k5")
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
+
+[node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
+spawnee = ExtResource("1_pcawa")
+maxForce = Vector3(0.5, 0, 2)
+minForce = Vector3(-0.5, 0, 1)
+maxTorque = Vector3(0, 1, 0)

@@ -87,6 +87,7 @@ axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_fhhbr")
 constant_force = Vector3(0, 0, 1)
 script = ExtResource("1_64b0s")
+lifetime = 30.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
 mesh = SubResource("BoxMesh_avbr7")

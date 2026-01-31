@@ -1214,7 +1214,7 @@ tracks/99/path = NodePath("ColorRect:visible")
 tracks/99/interp = 1
 tracks/99/loop_wrap = true
 tracks/99/keys = {
-"times": PackedFloat32Array(0, 26, 28),
+"times": PackedFloat32Array(0, 28, 30),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, true]
@@ -1226,7 +1226,7 @@ tracks/100/path = NodePath("ColorRect:modulate")
 tracks/100/interp = 1
 tracks/100/loop_wrap = true
 tracks/100/keys = {
-"times": PackedFloat32Array(0, 26, 28),
+"times": PackedFloat32Array(0, 28, 30),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]

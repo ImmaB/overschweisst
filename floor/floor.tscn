@@ -6,12 +6,12 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nr51y"]
 render_priority = 0
 shader = ExtResource("2_wld48")
-shader_parameter/dark_lava_color = Color(0.16078432, 0.05882353, 0, 1)
-shader_parameter/light_lava_color = Color(0.78431374, 0.25882354, 0, 1)
+shader_parameter/dark_lava_color = Color(0.24, 0.088, 0, 1)
+shader_parameter/light_lava_color = Color(1, 0.33333337, 0, 1)
 shader_parameter/speed = 1.64400007809
-shader_parameter/scale = 1294.1530614690075
-shader_parameter/sharpness = 3.000000095
-shader_parameter/emission_intensity = 2.3530001117675
+shader_parameter/scale = 1522.5150723162026
+shader_parameter/sharpness = 10.3570004444575
+shader_parameter/emission_intensity = 10.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_e6tlm"]
 lightmap_size_hint = Vector2i(5002, 5002)

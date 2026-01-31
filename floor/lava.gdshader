@@ -48,7 +48,9 @@ void fragment() {
     vec2 uv = UV * scale;
     float voronoi_value = voronoiIQ(uv);
 
-    vec4 final_color = mix(dark_lava_color, light_lava_color, voronoi_value);
+    float curve_value = voronoi_value * voronoi_value * voronoi_value;
+
+    vec4 final_color = mix(dark_lava_color, light_lava_color, curve_value);
     ALBEDO = final_color.rgb;
-	EMISSION = final_color.rgb * emission_intensity;
+	EMISSION = final_color.rgb * emission_intensity * curve_value;
 }

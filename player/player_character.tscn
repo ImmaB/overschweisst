@@ -7,24 +7,38 @@
 [ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="5_2brt4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+radius = 0.25
+height = 1.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+radius = 0.25
+height = 1.0
 
 [node name="PlayerCharacter" type="CharacterBody3D" unique_id=751799812]
 script = ExtResource("3_3w0fi")
-movement_speed = 4.0
+turn_speed = 2.0
+acceleration = 5.0
+turn_acceleration = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=986994085]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.7246288, 0, 1, 0)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("CapsuleMesh_sh265")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+>>>>>>> 359adaa64242c05cf9236823e5cf36c8f36e6f6f
 shape = SubResource("CapsuleShape3D_4flbx")
 
 [node name="VisionConePosition" type="Node3D" parent="." unique_id=1310239003]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5573387, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6578144, 0)
 
 [node name="PlayerController" type="Node" parent="." unique_id=648838875 node_paths=PackedStringArray("controlled_player")]
 script = ExtResource("2_rkbax")
@@ -32,6 +46,7 @@ controlled_player = NodePath("..")
 
 [node name="Welder" parent="." unique_id=96464349 instance=ExtResource("4_tncax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1326869)
+<<<<<<< HEAD
 
 [node name="player_mesh" parent="." unique_id=1233777355 instance=ExtResource("4_2brt4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028556287, 0)
@@ -65,3 +80,6 @@ bones/22/rotation = Quaternion(-0.016650682, -5.4719276e-06, 0.020203536, 0.9996
 surface_material_override/0 = ExtResource("5_2brt4")
 
 [editable path="player_mesh"]
+=======
+radius = 0.25
+>>>>>>> 359adaa64242c05cf9236823e5cf36c8f36e6f6f

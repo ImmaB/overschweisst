@@ -1,7 +1,7 @@
 # Bare Necessities
 
 - der Schweiß (I) ✓
-- Kamera (I)
+- Kamera (I) ✓
 - Platformen schmelzen
 - Platformen Blockouts in verschiedenen Größen (S)
 - Platform Fließverhalten (S)
@@ -13,6 +13,7 @@
 
 # Nice to have
 
+- Schweiß Energy ✓
 - Sounds
 - Musik
 - Title screen

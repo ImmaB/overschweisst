@@ -55,23 +55,22 @@ func spawnPlatform():
 		var torq := random_torque(maxTorque)
 		var spawnee = random_spawnee(spawnees)
 		if is_instance_valid(spawnee):
-		
-		var instancee = spawnee.instantiate()
-		instancee.global_position = spawnPos
-		var instCollisionShape = instancee.get_node("CollisionShape3D")
-		var instShapeCast = create_sensor_from_collision(instCollisionShape)
-		add_child(instShapeCast) 
-		instShapeCast.force_shapecast_update()
-		
-		if instShapeCast.is_colliding():
-			instancee.queue_free()
-			instShapeCast.queue_free()
-			continue
-		else:
-			instancee.constant_force = forq
-			instancee.angular_velocity = torq
-			get_tree().root.add_child(instancee)
-			break
+			var instancee = spawnee.instantiate()
+			instancee.global_position = spawnPos
+			var instCollisionShape = instancee.get_node("CollisionShape3D")
+			var instShapeCast = create_sensor_from_collision(instCollisionShape)
+			add_child(instShapeCast) 
+			instShapeCast.force_shapecast_update()
+			
+			if instShapeCast.is_colliding():
+				instancee.queue_free()
+				instShapeCast.queue_free()
+				continue
+			else:
+				instancee.constant_force = forq
+				instancee.angular_velocity = torq
+				get_tree().root.add_child(instancee)
+				break
 
 
 func _on_timer_timeout() -> void:

@@ -1,8 +1,6 @@
 class_name Welder
 extends Area3D
 
-const WELD_SPOT_SCENE: PackedScene = preload("res://player/welder/weld_spot.tscn")
-
 @export var weld_interval: float = 0.2
 @onready var _timer: Timer = $Timer
 var is_welding:
@@ -26,13 +24,7 @@ func _weld() -> void:
 	print("found weldable bodies: ", str(weldable_bodies.size()))
 	match weldable_bodies.size():
 		0: pass
-		1: _create_weld_spot()
+		1: WeldSpot.create(weldable_bodies[0], global_position)
 		_:
-			var weld_spot := _create_weld_spot()
-			weld_spot.weld_bodies(weldable_bodies[0], weldable_bodies[1])
-
-func _create_weld_spot() -> WeldSpot:
-	var weld_spot: WeldSpot = WELD_SPOT_SCENE.instantiate()
-	get_tree().current_scene.add_child(weld_spot)
-	weld_spot.global_position = global_position
-	return weld_spot
+			var weld_spot := WeldSpot.create(weldable_bodies[0], global_position)
+			weld_spot.weld_to(weldable_bodies[1])

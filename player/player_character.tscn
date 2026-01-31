@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b7o4bqvjfedt2"]
 
-[ext_resource type="PackedScene" uid="uid://ct4qciaa3jeou" path="res://player/vision_cone.tscn" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://dgju88uaiqdp5" path="res://player/player_controller.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://dfnx68jdv7t7l" path="res://player/player_character.gd" id="3_3w0fi"]
 [ext_resource type="PackedScene" uid="uid://d1f40cnbhp7qp" path="res://player/welder/welder.tscn" id="4_tncax"]
@@ -21,13 +20,12 @@ mesh = SubResource("CapsuleMesh_sh265")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_4flbx")
 
-[node name="VisionCone" parent="." unique_id=1376990631 instance=ExtResource("1_oul6g")]
+[node name="VisionConePosition" type="Node3D" parent="." unique_id=1310239003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5573387, 0)
-visible = false
 
 [node name="PlayerController" type="Node" parent="." unique_id=648838875 node_paths=PackedStringArray("controlled_player")]
 script = ExtResource("2_rkbax")
 controlled_player = NodePath("..")
 
 [node name="Welder" parent="." unique_id=96464349 instance=ExtResource("4_tncax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5720477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1326869)

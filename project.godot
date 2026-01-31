@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Overschweisst"
-run/main_scene="uid://b7hladk2xbimf"
+run/main_scene="uid://b3qfhr268u4yy"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

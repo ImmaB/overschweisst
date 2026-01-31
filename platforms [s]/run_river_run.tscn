@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b3qfhr268u4yy"]
 
 [ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
-[ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
-[ext_resource type="PackedScene" uid="uid://coi6f0gti32sw" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
-[ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
+[ext_resource type="PackedScene" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
+[ext_resource type="PackedScene" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
+[ext_resource type="PackedScene" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
+[ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -105,3 +106,5 @@ mesh = SubResource("BoxMesh_dnqks")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D8/StaticBody3D" unique_id=279881747]
 shape = SubResource("BoxShape3D_ju5k5")
+
+[node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]

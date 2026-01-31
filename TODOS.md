@@ -5,6 +5,7 @@
 - Platformen Blockouts in verschiedenen Größen (S)
 - Platform Fließverhalten (S)
   - reibungslos
+  - Fluss ✓
 - Platform generation (S)
 - Grafik: Schweißer (M)
 - Grafik: Platform (M)

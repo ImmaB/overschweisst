@@ -112,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
 
 [node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
-spawnee = ExtResource("1_pcawa")
+spawnees = null
 maxForce = Vector3(0.5, 0, 2)
 minForce = Vector3(-0.5, 0, 1)
 maxTorque = Vector3(0, 1, 0)

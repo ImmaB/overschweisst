@@ -1,7 +1,8 @@
 extends Area3D
 
 @onready var vol = $CollisionShape3D
-@export var spawnee: PackedScene
+@export var spawnees: Array[PackedScene] =  []
+#@export var spawnee: PackedScene
 @export var maxForce: Vector3
 @export var minForce: Vector3
 @export var maxTorque: Vector3
@@ -40,6 +41,10 @@ func random_force(maxForce: Vector3, minForce: Vector3) -> Vector3:
 		randf_range(0, 0),
 		randf_range(minForce.z, maxForce.z))
 	return randForce
+	
+func random_spawnee(spawnees: Array[PackedScene]) -> PackedScene:
+	var current_spawnee = spawnees.pick_random()
+	return current_spawnee
 
 func spawnPlatform():
 	var maxTries := 0
@@ -48,6 +53,8 @@ func spawnPlatform():
 		var spawnPos := random_point(vol)
 		var forq := random_force(maxForce, minForce)
 		var torq := random_torque(maxTorque)
+		var spawnee = random_spawnee(spawnees)
+		if is_instance_valid(spawnee):
 		
 		var instancee = spawnee.instantiate()
 		instancee.global_position = spawnPos

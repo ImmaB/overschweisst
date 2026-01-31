@@ -1,12 +1,82 @@
 [gd_scene format=3 uid="uid://hkole07awtcl"]
 
 [ext_resource type="Script" uid="uid://bqamn1k4h4db4" path="res://platforms/platform.gd" id="1_64b0s"]
-[ext_resource type="Material" uid="uid://dbsbrfvkahxbr" path="res://materials/M_Metal.tres" id="2_w7mls"]
+[ext_resource type="Material" uid="uid://bavbxd717i305" path="res://materials/M_Metal.tres" id="2_w7mls"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_avbr7"]
+
+[sub_resource type="Animation" id="Animation_w7mls"]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_avbr7"]
+resource_name = "melt"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("./MeshInstance3D:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.26543692, 0.24457592, 0.29831737, 1), Color(1.1953664, 0.43916893, 0.32283086, 1), Color(8.738331, 1.931487, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("./MeshInstance3D")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(4.0666666, 1, 0, 0, 0, 5, 1, 0, -1, 0)
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("./CollisionShape3D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.233333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0l1pk"]
+_data = {
+&"RESET": SubResource("Animation_w7mls"),
+&"melt": SubResource("Animation_avbr7")
+}
 
 [node name="Platform" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
 collision_layer = 3
@@ -25,4 +95,9 @@ surface_material_override/0 = ExtResource("2_w7mls")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1775353590]
 
 [node name="Timer" type="Timer" parent="." unique_id=694947561]
+process_callback = 0
+wait_time = 5.0
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1968748899]
+libraries/ = SubResource("AnimationLibrary_0l1pk")

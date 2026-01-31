@@ -5,7 +5,7 @@
 [node name="PlayerCamera" type="Node3D" unique_id=2092121811]
 transform = Transform3D(0.8935752, 0, 0.44891354, 0, 1, 0, -0.44891354, 0, 0.8935752, 0, 0, 0)
 script = ExtResource("1_xvnxv")
-_max_speed = 1.0
+_max_speed = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1027264267]
 transform = Transform3D(1, 0, 0, 0, 0.6768503, 0.7361207, 0, -0.7361207, 0.6768503, 0, 2.8920364, 2.2694552)

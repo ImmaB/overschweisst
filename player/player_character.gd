@@ -8,6 +8,7 @@ const VISION_CONE := preload("res://player/vision_cone.tscn")
 @export var aerial_control_factor: float = 0.5
 @export var acceleration: float = 10.0
 @export var turn_acceleration: float = 10.0
+@export var animation_player: AnimationPlayer
 
 @onready var _welder: Welder = $Welder
 @onready var _vision_cone_position: Node3D = $VisionConePosition
@@ -41,6 +42,7 @@ func set_look_direction(direction: Vector2) -> void:
     _look_rotation = atan2(direction.x, direction.y) - PI
 
 func stop_movement() -> void:
+    animation_player.play("ArmatureAction")
     _move_direction = Vector2.ZERO
 
 func start_welding() -> void:

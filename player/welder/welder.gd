@@ -46,11 +46,9 @@ func _weld() -> void:
 	var weld_spark_instance = WELD_SPARK.instantiate()
 	get_tree().root.add_child(weld_spark_instance)
 	weld_spark_instance.global_position = global_position
-	add_child(weld_spark_instance)
 	var overlapping_bodies := get_overlapping_bodies()
 	var weldable_bodies := overlapping_bodies.filter(func(body):
 		return body.is_in_group("weldable"))
-	print("found weldable bodies: ", str(weldable_bodies.size()))
 	match weldable_bodies.size():
 		0: pass
 		1: WeldSpot.create(weldable_bodies[0], global_position, radius)

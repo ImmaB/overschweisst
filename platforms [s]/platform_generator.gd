@@ -56,7 +56,6 @@ func spawnPlatform():
 		var spawnee = random_spawnee(spawnees)
 		if is_instance_valid(spawnee):
 			var instancee = spawnee.instantiate()
-			instancee.global_position = spawnPos
 			var instCollisionShape = instancee.get_node("CollisionShape3D")
 			var instShapeCast = create_sensor_from_collision(instCollisionShape)
 			add_child(instShapeCast) 
@@ -70,6 +69,7 @@ func spawnPlatform():
 				instancee.constant_force = forq
 				instancee.angular_velocity = torq
 				get_tree().root.add_child(instancee)
+				instancee.global_position = spawnPos
 				break
 
 

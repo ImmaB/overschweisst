@@ -10,19 +10,19 @@ extends RigidBody3D
 var _touched_player: bool = false
 
 func _ready():
-    _timer.wait_time = lifetime
-    _timer.start()
-    _timer.timeout.connect(_start_melting)
-    mass = _mass
+	_timer.wait_time = lifetime
+	_timer.start()
+	_timer.timeout.connect(_start_melting)
+	mass = _mass
 
 func _start_melting() -> void:
-    animation_player.play("melt")
+	animation_player.play("melt")
 
 func remove_forces() -> void:
-    constant_force = Vector3.ZERO
-    angular_velocity = Vector3.ZERO
+	constant_force = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
 
 func _collision(body: Node) -> void:
-    if not _touched_player and body is PlayerCharacter:
-        _touched_player = true
-        remove_forces()
+	if not _touched_player and body is PlayerCharacter:
+		_touched_player = true
+		remove_forces()

@@ -690,6 +690,498 @@ tracks/55/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Node2/Platform:freeze")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Node2/Platform2:freeze")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Node2/Platform3:freeze")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Node2/Platform4:freeze")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Node2/Platform5:freeze")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Node2/Platform6:freeze")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Node2/Platform7:freeze")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Node2/Platform8:freeze")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Node2/Platform9:freeze")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Node2/Platform10:freeze")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Node2/Platform11:freeze")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Node2/Platform12:freeze")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Node2/Platform13:freeze")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Node2/Platform14:freeze")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Node2/Platform15:freeze")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("Node2/Platform16:freeze")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("Node2/Platform17:freeze")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("Node2/Platform18:freeze")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("Node2/Platform19:freeze")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("Node2/Platform20:freeze")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("Node2/Platform21:freeze")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("Node2/Platform22:freeze")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("Node2/Platform23:freeze")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("Node2/Platform24:freeze")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("Node2/Platform25:freeze")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("Node2/Platform26:freeze")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("Node2/Platform27:freeze")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("Node2/Platform28:freeze")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("Node2/Platform29:freeze")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("Node2/Platform30:freeze")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("Node2/Platform31:freeze")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("Node2/Platform32:freeze")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("Node2/Platform33:freeze")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("Node2/Platform34:freeze")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("Node2/Platform35:freeze")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("Node2/Platform36:freeze")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("Node2/Platform37:freeze")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("Node2/Platform38:freeze")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/94/type = "value"
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/path = NodePath("Node2/Platform39:freeze")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/95/type = "value"
+tracks/95/imported = false
+tracks/95/enabled = true
+tracks/95/path = NodePath("Node2/Platform40:freeze")
+tracks/95/interp = 1
+tracks/95/loop_wrap = true
+tracks/95/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/96/type = "value"
+tracks/96/imported = false
+tracks/96/enabled = true
+tracks/96/path = NodePath("Node2:visible")
+tracks/96/interp = 1
+tracks/96/loop_wrap = true
+tracks/96/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_1q7h5"]
 length = 0.001
@@ -1332,6 +1824,498 @@ tracks/53/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Node2/Platform:freeze")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Node2/Platform2:freeze")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Node2/Platform3:freeze")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Node2/Platform4:freeze")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Node2/Platform5:freeze")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Node2/Platform6:freeze")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Node2/Platform7:freeze")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Node2/Platform8:freeze")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Node2/Platform9:freeze")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Node2/Platform10:freeze")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Node2/Platform11:freeze")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Node2/Platform12:freeze")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Node2/Platform13:freeze")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Node2/Platform14:freeze")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Node2/Platform15:freeze")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Node2/Platform16:freeze")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Node2/Platform17:freeze")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("Node2/Platform18:freeze")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("Node2/Platform19:freeze")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("Node2/Platform20:freeze")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("Node2/Platform21:freeze")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("Node2/Platform22:freeze")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("Node2/Platform23:freeze")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("Node2/Platform24:freeze")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("Node2/Platform25:freeze")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("Node2/Platform26:freeze")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("Node2/Platform27:freeze")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("Node2/Platform28:freeze")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("Node2/Platform29:freeze")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("Node2/Platform30:freeze")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("Node2/Platform31:freeze")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("Node2/Platform32:freeze")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("Node2/Platform33:freeze")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("Node2/Platform34:freeze")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("Node2/Platform35:freeze")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("Node2/Platform36:freeze")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("Node2/Platform37:freeze")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("Node2/Platform38:freeze")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("Node2/Platform39:freeze")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("Node2/Platform40:freeze")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/94/type = "value"
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/path = NodePath("Node2:visible")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5lnx"]
 _data = {
@@ -1532,7 +2516,7 @@ freeze = true
 lifetime = 90.0
 
 [node name="Platform23" parent="Node" unique_id=2111611861 instance=ExtResource("9_1l24h")]
-transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 7.6171083, 0, -23.445032)
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 9.56078, 0, -20.553913)
 freeze = true
 lifetime = 90.0
 
@@ -1582,7 +2566,7 @@ freeze = true
 lifetime = 90.0
 
 [node name="Platform33" parent="Node" unique_id=729079028 instance=ExtResource("11_ao3yw")]
-transform = Transform3D(0.51944464, 0, 0.8545043, 0, 1, 0, -0.8545043, 0, 0.51944464, 0.5300243, 0, -23.474054)
+transform = Transform3D(0.51944464, 0, 0.8545043, 0, 1, 0, -0.8545043, 0, 0.51944464, 1.6045692, 0, -23.474052)
 freeze = true
 lifetime = 90.0
 
@@ -1602,7 +2586,7 @@ freeze = true
 lifetime = 90.0
 
 [node name="Platform37" parent="Node" unique_id=1528128307 instance=ExtResource("7_axcp6")]
-transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 5.3906946, 0, -39.744343)
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 6.08179, 0, -38.197605)
 freeze = true
 lifetime = 90.0
 
@@ -1617,6 +2601,210 @@ freeze = true
 lifetime = 90.0
 
 [node name="Platform40" parent="Node" unique_id=1330370276 instance=ExtResource("7_axcp6")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -11.42201, 0, -25.165285)
+freeze = true
+lifetime = 90.0
+
+[node name="Node2" type="Node3D" parent="." unique_id=461562546]
+transform = Transform3D(0.09770453, 0, -0.9952155, 0, 1, 0, 0.9952155, 0, 0.09770453, -13.935384, 0, -45.432434)
+visible = false
+
+[node name="Platform" parent="Node2" unique_id=1252819792 instance=ExtResource("7_axcp6")]
+transform = Transform3D(0.75036496, 0, 0.6610238, 0, 1, 0, -0.6610238, 0, 0.75036496, 0.058657527, 0, -10.157228)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform2" parent="Node2" unique_id=758186322 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(0.83687896, 0, 0.54738796, 0, 1, 0, -0.54738796, 0, 0.83687896, 2.981556, 0, -7.7985587)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform3" parent="Node2" unique_id=546657030 instance=ExtResource("9_1l24h")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, -0.18576431, 0, -2.751831)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform4" parent="Node2" unique_id=730467000 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 4.1385, 0, -0.53707695)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform5" parent="Node2" unique_id=256894697 instance=ExtResource("10_ie2y0")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, -1.2588944, 0, -6.788456)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform6" parent="Node2" unique_id=53134607 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, -7.724345, 0, 2.2566013)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform7" parent="Node2" unique_id=1522923259 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(0.5647222, 0, 0.82528114, 0, 1, 0, -0.82528114, 0, 0.5647222, -1.6798348, 0, 0.37640572)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform8" parent="Node2" unique_id=586161263 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(-0.83625746, 0, 0.54833704, 0, 1, 0, -0.54833704, 0, -0.83625746, 5.6475353, 0, 1.8350925)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform9" parent="Node2" unique_id=1747995606 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 9.446232, 0, -8.604956)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform10" parent="Node2" unique_id=1377905659 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(0.9631626, 0, -0.2689198, 0, 1, 0, 0.2689198, 0, 0.9631626, -2.502286, 0, -14.65167)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform11" parent="Node2" unique_id=1343255383 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, -7.0550337, 0, -8.006378)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform12" parent="Node2" unique_id=766257785 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 7.296627, 0, -2.543428)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform13" parent="Node2" unique_id=1225445840 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(0.7866119, 0, -0.61744785, 0, 1, 0, 0.61744785, 0, 0.7866119, -4.017686, 0, -10.945496)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform14" parent="Node2" unique_id=1245695448 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(0.9700673, 0, -0.2428363, 0, 1, 0, 0.2428363, 0, 0.9700673, 1.4965336, 0, -17.81894)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform15" parent="Node2" unique_id=1782013479 instance=ExtResource("13_rcqw2")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, -5.236061, 0, -17.751347)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform16" parent="Node2" unique_id=869042045 instance=ExtResource("13_rcqw2")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 4.243822, 0, -15.062843)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform17" parent="Node2" unique_id=591873238 instance=ExtResource("7_axcp6")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 11.558496, 0, -4.183033)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform18" parent="Node2" unique_id=487092617 instance=ExtResource("7_axcp6")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 4.5175743, 0, -12.5071125)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform19" parent="Node2" unique_id=227589255 instance=ExtResource("7_axcp6")]
+transform = Transform3D(0.8513518, 0, 0.52459526, 0, 1, 0, -0.52459526, 0, 0.8513518, -6.186429, 0, -14.461559)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform20" parent="Node2" unique_id=1389113033 instance=ExtResource("7_axcp6")]
+transform = Transform3D(0.99198073, 0, 0.12638941, 0, 1, 0, -0.12638941, 0, 0.99198073, 22.12149, -1.9073486e-06, -24.345474)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform21" parent="Node2" unique_id=2131967057 instance=ExtResource("7_axcp6")]
+transform = Transform3D(-0.74562734, 0, 0.66636336, 0, 1, 0, -0.66636336, 0, -0.74562734, 0.827559, 0, -27.615236)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform22" parent="Node2" unique_id=1763829685 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(-0.64309514, 0, 0.76578647, 0, 1, 0, -0.76578647, 0, -0.64309514, 4.631571, 0, -32.641476)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform23" parent="Node2" unique_id=1049958572 instance=ExtResource("9_1l24h")]
+transform = Transform3D(-0.2435473, 0, 0.9698892, 0, 1, 0, -0.9698892, 0, -0.2435473, 9.457287, 0, -21.797348)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform24" parent="Node2" unique_id=1477653437 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 9.893797, 0, -32.810986)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform25" parent="Node2" unique_id=1643906607 instance=ExtResource("10_ie2y0")]
+transform = Transform3D(-0.2435473, 0, 0.9698892, 0, 1, 0, -0.9698892, 0, -0.2435473, 23.409222, 1.9073486e-06, -20.628414)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform26" parent="Node2" unique_id=2098449493 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 14.079423, 0, -21.364925)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform27" parent="Node2" unique_id=1280324225 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 10.881008, 0, -25.807478)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform28" parent="Node2" unique_id=814395454 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 12.069516, 0, -34.59161)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform29" parent="Node2" unique_id=1231886834 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 1.2515798, 0, -37.12083)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform30" parent="Node2" unique_id=1903928029 instance=ExtResource("8_sg2fo")]
+transform = Transform3D(0.15238214, 0, 0.9883217, 0, 1, 0, -0.9883217, 0, 0.15238214, -3.33016, 0, -24.537607)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform31" parent="Node2" unique_id=260021503 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 3.8097286, 0, -20.808077)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform32" parent="Node2" unique_id=2144758846 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -7.6319094, 0, -31.851704)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform33" parent="Node2" unique_id=1702896723 instance=ExtResource("11_ao3yw")]
+transform = Transform3D(0.51944464, 0, 0.8545043, 0, 1, 0, -0.8545043, 0, 0.51944464, 0.5300243, 0, -23.474054)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform34" parent="Node2" unique_id=2093282930 instance=ExtResource("12_dk8sq")]
+transform = Transform3D(0.12566224, 0, 0.9920731, 0, 1, 0, -0.9920731, 0, 0.12566224, -6.950819, 0, -28.131071)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform35" parent="Node2" unique_id=850881289 instance=ExtResource("13_rcqw2")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -6.0824604, 0, -21.454369)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform36" parent="Node2" unique_id=1913510761 instance=ExtResource("13_rcqw2")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -4.5412664, 0, -31.18684)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform37" parent="Node2" unique_id=917478917 instance=ExtResource("7_axcp6")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, 5.3906946, 0, -39.744343)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform38" parent="Node2" unique_id=1718349795 instance=ExtResource("7_axcp6")]
+transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -2.036282, 0, -31.762806)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform39" parent="Node2" unique_id=1047732493 instance=ExtResource("7_axcp6")]
+transform = Transform3D(-0.6221868, 0, 0.7828689, 0, 1, 0, -0.7828689, 0, -0.6221868, -2.7029483, 0, -20.902273)
+freeze = true
+lifetime = 90.0
+
+[node name="Platform40" parent="Node2" unique_id=1566878337 instance=ExtResource("7_axcp6")]
 transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -11.42201, 0, -25.165285)
 freeze = true
 lifetime = 90.0

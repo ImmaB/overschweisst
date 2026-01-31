@@ -35,6 +35,9 @@ func toggle_vision_cone() -> void:
     _vision_cone.visible = not _vision_cone.visible
 
 func set_movement(direction: Vector2) -> void:
+    if animation_player.current_animation != "run":
+        animation_player.play("run")
+    animation_player.speed_scale = direction.length()
     _move_direction = direction.normalized() if direction.length_squared() > 1.0 else direction
 
 func set_look_direction(direction: Vector2) -> void:
@@ -64,9 +67,6 @@ func _physics_process(delta: float) -> void:
         if randf() < 0.5:
             _fall_direction *= -1
         rotation.x = lerp_angle(rotation.x, 0.0, turn_acceleration * delta)
-    if animation_player.current_animation != "run":
-        animation_player.play("run")
-    animation_player.speed_scale = velocity.length() / movement_speed if on_floor else 1.0
 
     move_and_slide()
 

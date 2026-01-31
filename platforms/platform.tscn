@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://hkole07awtcl"]
 
 [ext_resource type="Script" uid="uid://bqamn1k4h4db4" path="res://platforms/platform.gd" id="1_64b0s"]
+[ext_resource type="Material" uid="uid://dbsbrfvkahxbr" path="res://materials/M_Metal.tres" id="2_w7mls"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_avbr7"]
 
 [node name="Platform" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
 collision_layer = 3
@@ -16,6 +19,8 @@ constant_force = Vector3(0, 0, 1)
 script = ExtResource("1_64b0s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
+mesh = SubResource("BoxMesh_avbr7")
+surface_material_override/0 = ExtResource("2_w7mls")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1775353590]
 

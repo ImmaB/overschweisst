@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bpufv3nlchmcc"]
+
+[ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_blms6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_iplba"]
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gg3mg"]
+size = Vector3(1, 0.2, 1)
+
+[node name="Platform" unique_id=1319896732 instance=ExtResource("1_blms6")]
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
+mesh = SubResource("BoxMesh_iplba")
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
+shape = SubResource("BoxShape3D_gg3mg")

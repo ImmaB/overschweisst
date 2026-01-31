@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://hkole07awtcl"]
+
+[ext_resource type="Script" uid="uid://bqamn1k4h4db4" path="res://platforms/platform.gd" id="1_64b0s"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
+friction = 0.0
+
+[node name="Platform" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
+collision_layer = 3
+collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_fhhbr")
+constant_force = Vector3(0, 0, 1)
+script = ExtResource("1_64b0s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1775353590]
+
+[node name="Timer" type="Timer" parent="." unique_id=694947561]
+one_shot = true

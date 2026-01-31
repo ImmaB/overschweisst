@@ -7,7 +7,7 @@
 - Platform Fließverhalten (S)
   - reibungslos ✓
   - Fluss ✓
-- Platform generation (S)
+- Platform generation (S) ✓
 - Grafik: Schweißer (M)
 - Grafik: Platform (M)
 

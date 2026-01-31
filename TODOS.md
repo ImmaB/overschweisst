@@ -2,7 +2,7 @@
 
 - der Schweiß (I) ✓
 - Kamera (I) ✓
-- Platformen schmelzen
+- Platformen schmelzen (hald done)
 - Platformen Blockouts in verschiedenen Größen (S) ✓
 - Platform Fließverhalten (S) ✓
   - reibungslos ✓
@@ -19,7 +19,7 @@
 - Musik
 - Title screen
 - Platform wobble
-- schweißpunkt im Dunkeln
+- schweißpunkt im Dunkeln ✓
 
 # Wenn Zeit ist
 

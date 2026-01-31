@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://eoe2vnucs3ha"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
+friction = 0.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sixdk"]
+top_radius = 1.5
+bottom_radius = 1.5
+height = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6pgcg"]
+height = 0.2
+radius = 1.5
+
+[node name="platform_2x2" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
+collision_layer = 3
+collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 4.0
+physics_material_override = SubResource("PhysicsMaterial_fhhbr")
+constant_force = Vector3(0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
+mesh = SubResource("CylinderMesh_sixdk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1263672339]
+shape = SubResource("CylinderShape3D_6pgcg")

@@ -12,7 +12,6 @@ script = ExtResource("1_8ckdc")
 shape = SubResource("BoxShape3D_abu4y")
 
 [node name="Timer" type="Timer" parent="." unique_id=92717857]
-wait_time = 0.2
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,26 +1,26 @@
-[gd_scene format=3 uid="uid://b8irp6bmubm54"]
+[gd_scene format=3 uid="uid://bpv8w013rx570"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_iplba"]
-size = Vector3(2, 0.2, 1)
+size = Vector3(1, 3, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lp6hl"]
-size = Vector3(2, 0.2, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_0to04"]
+size = Vector3(1, 3, 1)
 
-[node name="platform_2x1" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
+[node name="platform_chunk" type="RigidBody3D" unique_id=1319896732]
 collision_layer = 3
 collision_mask = 3
 axis_lock_linear_y = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
-mass = 2.0
+mass = 30.0
 physics_material_override = SubResource("PhysicsMaterial_fhhbr")
 constant_force = Vector3(0, 0, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
 mesh = SubResource("BoxMesh_iplba")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2005546021]
-shape = SubResource("BoxShape3D_lp6hl")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1484632475]
+shape = SubResource("BoxShape3D_0to04")

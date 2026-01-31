@@ -39,13 +39,14 @@ func stop_welding() -> void:
 	_timer.stop()
 
 func _weld() -> void:
+	var weld_spark: WeldSpark = WELD_SPARK.instantiate()
+	get_tree().root.add_child(weld_spark)
+	weld_spark.global_position = global_position
 	if _current_energy < energy_per_weld:
-		print("not enough energy to weld")
+		weld_spark.spark(false)
 		return
+	weld_spark.spark(true)
 	_current_energy -= energy_per_weld
-	var weld_spark_instance = WELD_SPARK.instantiate()
-	get_tree().root.add_child(weld_spark_instance)
-	weld_spark_instance.global_position = global_position
 	var overlapping_bodies := get_overlapping_bodies()
 	var weldable_bodies := overlapping_bodies.filter(func(body):
 		return body.is_in_group("weldable"))

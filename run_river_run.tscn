@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
 [ext_resource type="PackedScene" uid="uid://c2hmb8p1o2tt0" path="res://platforms/platform_2x2_circle.tscn" id="6_rt7cs"]
 [ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="7_3jjne"]
-[ext_resource type="PackedScene" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
+[ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms/platform_generator.tscn" id="7_tfn42"]
 [ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="8_4hxb6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]

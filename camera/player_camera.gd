@@ -3,15 +3,19 @@ extends Node3D
 
 @export var _max_speed: float = 5.0
 
-var _target: Node3D
+var _targets: Array[PlayerCharacter]
 
-func set_target(target: Node3D) -> void:
-    _target = target
+func set_targets(targets: Array[PlayerCharacter]) -> void:
+    _targets = targets
 
 func _process(delta):
-    if _target == null:
+    if _targets.size() == 0:
         return
-    var to_target: Vector3 = _target.global_transform.origin - global_transform.origin
+    var position_sum: Vector3 = Vector3.ZERO
+    for target in _targets:
+        position_sum += target.global_transform.origin
+    var average_position: Vector3 = position_sum / _targets.size()
+    var to_target: Vector3 = average_position - global_transform.origin
     var distance: float = to_target.length()
     if distance < 0.01:
         return

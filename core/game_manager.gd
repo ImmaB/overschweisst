@@ -4,6 +4,9 @@ const GAME_OVER_SCREEN := preload("res://core/game_over_screen.tscn")
 
 var _player_characters: Array[PlayerCharacter] = []
 
+func get_player_characters() -> Array[PlayerCharacter]:
+    return _player_characters
+
 func register_player(player: PlayerCharacter) -> void:
     _player_characters.append(player)
 

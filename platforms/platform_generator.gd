@@ -7,15 +7,10 @@ extends Area3D
 @export var minForce: Vector3
 @export var maxTorque: Vector3
 
+var _player_characters: Array[PlayerCharacter]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	_player_characters = GameManager.get_player_characters()
 
 
 func random_point(vol: CollisionShape3D) -> Vector3:
@@ -46,7 +41,7 @@ func random_spawnee(spawnees: Array[PackedScene]) -> PackedScene:
 	var current_spawnee = spawnees.pick_random()
 	return current_spawnee
 
-func spawnPlatform():
+func _spawnPlatform():
 	var maxTries := 0
 	while maxTries < 10:
 		maxTries += 1
@@ -74,7 +69,16 @@ func spawnPlatform():
 
 
 func _on_timer_timeout() -> void:
-	spawnPlatform()
+	_adjust_position_to_players()
+	_spawnPlatform()
+
+
+func _adjust_position_to_players() -> void:
+	var x_position_sum = 0.0
+	for player in _player_characters:
+		x_position_sum += player.global_transform.origin.x
+	var average_x_position = x_position_sum / _player_characters.size()
+	position.x = average_x_position
 
 
 func create_sensor_from_collision(original_collision: CollisionShape3D) -> ShapeCast3D:

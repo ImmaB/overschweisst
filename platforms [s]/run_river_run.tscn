@@ -4,13 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
 [ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="2_tfn42"]
-[ext_resource type="PackedScene" uid="uid://dvjr5lri1v8gy" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
+[ext_resource type="PackedScene" uid="uid://bpufv3nlchmcc" path="res://platforms/platform_1x1.tscn" id="3_oepwp"]
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
+[ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="4_188ai"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
+[ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
+[ext_resource type="PackedScene" uid="uid://c2hmb8p1o2tt0" path="res://platforms/platform_2x2_circle.tscn" id="6_rt7cs"]
+[ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="7_3jjne"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
-[ext_resource type="PackedScene" uid="uid://eoe2vnucs3ha" path="res://platforms [s]/platform_2x2_circle.tscn" id="8_0hyk3"]
-[ext_resource type="PackedScene" uid="uid://dubwkkk3qg1pt" path="res://platforms [s]/platform_1x1.tscn" id="8_otoyl"]
-[ext_resource type="PackedScene" uid="uid://ck08ibnptw2ai" path="res://platforms [s]/platform_2x2_triangle.tscn" id="9_aha1f"]
+[ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="8_4hxb6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,7 +44,7 @@ environment = SubResource("Environment_642bm")
 
 [node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
-spawnees = Array[PackedScene]([ExtResource("8_otoyl"), ExtResource("3_k81gr"), ExtResource("1_pcawa"), ExtResource("4_6comq"), ExtResource("2_m5pyg"), ExtResource("8_0hyk3"), ExtResource("9_aha1f")])
+spawnees = Array[PackedScene]([ExtResource("3_oepwp"), ExtResource("4_188ai"), ExtResource("5_kk24s"), ExtResource("6_rt7cs"), ExtResource("7_3jjne"), ExtResource("8_4hxb6")])
 maxForce = Vector3(0.5, 0, 2)
 minForce = Vector3(-0.5, 0, 1)
 maxTorque = Vector3(0, 1, 0)
@@ -88,8 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36820865, -9.536743e-07, -3
 [node name="platform_pillar2" parent="." unique_id=1772609740 instance=ExtResource("2_m5pyg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8223915, 0, -3.1911845)
 
-[node name="platform_centre" parent="." unique_id=100828305 instance=ExtResource("3_k81gr")]
-mass = 10.0
+[node name="Platform" parent="." unique_id=197132205 instance=ExtResource("5_kk24s")]
 constant_force = Vector3(0, 0, 0)
 
 [node name="platform_chunk" parent="." unique_id=1885625837 instance=ExtResource("4_6comq")]

@@ -1,6 +1,8 @@
 class_name Welder
 extends Area3D
 
+const WELD_SPARK = preload("res://player/welder/weld_spark.tscn")
+
 @export var weld_interval: float = 0.2
 @export var min_distance: float = 0.2
 
@@ -41,6 +43,10 @@ func _weld() -> void:
 		print("not enough energy to weld")
 		return
 	_current_energy -= energy_per_weld
+	var weld_spark_instance = WELD_SPARK.instantiate()
+	get_tree().root.add_child(weld_spark_instance)
+	weld_spark_instance.global_position = global_position
+	add_child(weld_spark_instance)
 	var overlapping_bodies := get_overlapping_bodies()
 	var weldable_bodies := overlapping_bodies.filter(func(body):
 		return body.is_in_group("weldable"))

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b7hladk2xbimf"]
 
+[ext_resource type="PackedScene" uid="uid://bur23mhaqvd7y" path="res://player/player_mesh.glb" id="1_c1xds"]
 [ext_resource type="Material" uid="uid://be3bw88ru6smv" path="res://M_Base_Test.tres" id="1_ju5k5"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_vcqsd"]
+[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_l33tl"]
 [ext_resource type="PackedScene" uid="uid://jwek3t3337q6" path="res://gear.glb" id="3_dnqks"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
@@ -123,6 +125,37 @@ shadow_enabled = true
 mesh = SubResource("PlaneMesh_e6tlm")
 surface_material_override/0 = SubResource("StandardMaterial3D_ju5k5")
 
+[node name="player_mesh" parent="Floor" unique_id=1233777355 instance=ExtResource("1_c1xds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1705635, 0.2527499, 2.6937256)
+
+[node name="Skeleton3D" parent="Floor/player_mesh/Armature" parent_id_path=PackedInt32Array(1233777355, 314062048) index="0" unique_id=1604997218]
+bones/0/position = Vector3(-0.74579304, 0.603879, 0.28228906)
+bones/0/rotation = Quaternion(4.59048e-05, -1.6900012e-07, 1, -6.5565104e-07)
+bones/0/scale = Vector3(0.9998958, 0.99988943, 0.99979347)
+bones/1/position = Vector3(-0.16257395, -4.263711e-09, 7.093698e-05)
+bones/2/position = Vector3(0.74579304, 0.603879, 0.28228906)
+bones/2/rotation = Quaternion(4.59048e-05, 1.6900012e-07, -1, -6.5565104e-07)
+bones/2/scale = Vector3(0.9998958, 0.99988943, 0.99979347)
+bones/3/position = Vector3(0.16257395, -4.263711e-09, 7.093698e-05)
+bones/5/position = Vector3(0, 0.05909744, 0)
+bones/7/rotation = Quaternion(-5.6748362e-08, -2.84164e-07, 0.59509677, 0.803654)
+bones/8/rotation = Quaternion(9.573802e-08, -5.9753695e-09, 0.13418579, 0.99095625)
+bones/9/rotation = Quaternion(-1.0313965e-07, -2.343711e-07, 0.7565529, 0.6539326)
+bones/10/rotation = Quaternion(1.11559775e-08, -3.9727385e-07, 0.8685378, 0.4956231)
+bones/11/rotation = Quaternion(8.51337e-08, 9.255797e-08, -0.59509677, 0.803654)
+bones/12/rotation = Quaternion(9.573802e-08, 5.9753886e-09, -0.13418579, 0.99095625)
+bones/13/rotation = Quaternion(7.7236585e-08, 7.846142e-08, -0.7565529, 0.6539326)
+bones/14/rotation = Quaternion(2.1823149e-07, 2.7910812e-07, -0.8685378, 0.4956231)
+bones/16/rotation = Quaternion(0.27139246, -0.0318167, 0.029985663, 0.9614753)
+bones/18/rotation = Quaternion(0.27139246, 0.0318167, -0.029985663, 0.9614753)
+bones/19/rotation = Quaternion(0.94195807, -5.9117472e-08, -0.33573043, -2.5312082e-07)
+bones/20/rotation = Quaternion(-0.01665066, 5.4867996e-06, -0.02020357, 0.9996573)
+bones/21/rotation = Quaternion(0.941958, 5.9117454e-08, 0.3357307, -2.5312082e-07)
+bones/22/rotation = Quaternion(-0.016650682, -5.4719276e-06, 0.020203536, 0.9996573)
+
+[node name="Sphere" parent="Floor/player_mesh/Armature/Skeleton3D" index="0" unique_id=1522145808]
+surface_material_override/0 = ExtResource("2_l33tl")
+
 [node name="Schollen" type="Node3D" parent="." unique_id=1726990912]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Schollen" unique_id=685807559]
@@ -238,7 +271,7 @@ shape = SubResource("BoxShape3D_b4m2c")
 [node name="gear" parent="." unique_id=1152344367 instance=ExtResource("3_dnqks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7528214, 0, 5.7656384)
 
-[node name="Gear_001" parent="gear" index="0" unique_id=1848648117]
+[node name="Gear_001" parent="gear" index="0" unique_id=1730220036]
 surface_material_override/0 = ExtResource("1_ju5k5")
 
 [node name="Player" parent="." unique_id=751799812 instance=ExtResource("1_vcqsd")]
@@ -247,4 +280,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6885159, 0)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=11270234]
 transform = Transform3D(0.78099877, -0.51866066, 0.34789664, 0, 0.5570512, 0.8304782, -0.6245326, -0.6486024, 0.43505627, 3.0043309, 7.1717596, 3.7570157)
 
+[editable path="Floor/player_mesh"]
 [editable path="gear"]

@@ -10,6 +10,7 @@
 - Platform generation (S) ✓
 - Grafik: Schweißer (M)
 - Grafik: Platform (M)
+- ein Spielziel
 
 # Nice to have
 

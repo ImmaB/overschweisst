@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="7_3jjne"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
 [ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="8_4hxb6"]
+[ext_resource type="PackedScene" uid="uid://cdimfjmsoc6c2" path="res://player/welder/weld_spark.tscn" id="14_oepwp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -109,3 +110,6 @@ shape = SubResource("BoxShape3D_ju5k5")
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
+
+[node name="WeldSpot" parent="." unique_id=917848654 instance=ExtResource("14_oepwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058221698, -2.3841858e-07, -1.941337)

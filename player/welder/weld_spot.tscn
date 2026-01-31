@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://da2y1428o81k"]
 
 [ext_resource type="Script" uid="uid://bomraak8np3g3" path="res://player/welder/weld_spot.gd" id="1_w012b"]
-[ext_resource type="Material" uid="uid://dbsbrfvkahxbr" path="res://materials/M_Metal.tres" id="2_w012b"]
+[ext_resource type="Material" path="res://materials/M_Metal.tres" id="2_w012b"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_w012b"]
 

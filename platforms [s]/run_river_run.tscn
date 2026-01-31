@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
+[ext_resource type="PackedScene" uid="uid://dubwkkk3qg1pt" path="res://platforms [s]/platform_1x1.tscn" id="8_otoyl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -68,13 +69,13 @@ linear_damp = 0.2
 transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
 shape = SubResource("BoxShape3D_h8nvo")
 
-[node name="platform_2x1" parent="." unique_id=1993294131 instance=ExtResource("1_pcawa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2813464, 0, -5.5374947)
+[node name="platform_2x2" parent="." unique_id=1319896732 instance=ExtResource("1_pcawa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7140778, 0, -8.495002)
 linear_velocity = Vector3(0, 0, 1)
 angular_velocity = Vector3(0, 1.5707964, 0)
 
-[node name="platform_2x2" parent="." unique_id=1319896732 instance=ExtResource("1_pcawa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7140778, 0, -8.495002)
+[node name="platform_2x1" parent="." unique_id=1993294131 instance=ExtResource("1_pcawa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2813464, 0, -5.5374947)
 linear_velocity = Vector3(0, 0, 1)
 angular_velocity = Vector3(0, 1.5707964, 0)
 
@@ -112,7 +113,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
 
 [node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
-spawnees = null
+spawnees = Array[PackedScene]([ExtResource("8_otoyl"), ExtResource("3_k81gr"), ExtResource("1_pcawa"), ExtResource("4_6comq"), ExtResource("2_m5pyg")])
 maxForce = Vector3(0.5, 0, 2)
 minForce = Vector3(-0.5, 0, 1)
 maxTorque = Vector3(0, 1, 0)

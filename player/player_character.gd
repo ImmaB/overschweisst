@@ -11,6 +11,7 @@ const VISION_CONE := preload("res://player/vision_cone.tscn")
 
 @onready var _welder: Welder = $Welder
 @onready var _vision_cone_position: Node3D = $VisionConePosition
+var _vision_cone: Node3D
 
 var _gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 
@@ -20,10 +21,13 @@ var _fall_direction: float = 45
 
 func _ready():
     GameManager.register_player(self)
-    var vision_cone := VISION_CONE.instantiate()
-    _vision_cone_position.add_child(vision_cone)
+    _vision_cone = VISION_CONE.instantiate()
+    _vision_cone_position.add_child(_vision_cone)
 
 func die() -> void:
+    velocity = Vector3.ZERO
+    axis_lock_linear_y = true
+    _vision_cone.visible = false
     GameManager.player_died(self)
 
 func set_movement(direction: Vector2) -> void:

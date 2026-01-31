@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://csxrpbguad7a4" path="res://core/level.gd" id="1_5kr82"]
 [ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
 [ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
+[ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="2_tfn42"]
 [ext_resource type="PackedScene" uid="uid://dvjr5lri1v8gy" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
-[ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="7_tfn42"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,14 +20,6 @@ background_mode = 2
 sky = SubResource("Sky_vcqsd")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_e6tlm"]
-size = Vector2(30, 60)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju5k5"]
-albedo_color = Color(0.5, 0.099999994, 0.099999994, 1)
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h8nvo"]
 
@@ -48,11 +40,7 @@ environment = SubResource("Environment_642bm")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Floor" type="Node3D" parent="." unique_id=1197936061]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=250777798]
-mesh = SubResource("PlaneMesh_e6tlm")
-surface_material_override/0 = SubResource("StandardMaterial3D_ju5k5")
+[node name="Floor" parent="." unique_id=1232690141 instance=ExtResource("2_tfn42")]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1187250749]
 collision_layer = 2
@@ -109,10 +97,3 @@ shape = SubResource("BoxShape3D_ju5k5")
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
-
-[node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
-spawnees = null
-maxForce = Vector3(0.5, 0, 2)
-minForce = Vector3(-0.5, 0, 1)
-maxTorque = Vector3(0, 1, 0)

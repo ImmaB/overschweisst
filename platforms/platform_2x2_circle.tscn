@@ -2,4 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_u25ep"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_sixdk"]
+top_radius = 1.5
+bottom_radius = 1.5
+height = 0.2
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6pgcg"]
+height = 0.2
+radius = 1.5
+
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_u25ep")]
+mass = 4.0
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
+mesh = SubResource("CylinderMesh_sixdk")
+
+[node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
+shape = SubResource("CylinderShape3D_6pgcg")

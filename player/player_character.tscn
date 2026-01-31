@@ -34,7 +34,7 @@ radius = 0.25
 [node name="player_mesh" parent="." unique_id=396821489 instance=ExtResource("4_2brt4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028556287, 0)
 
-[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(396821489, 1100811325) index="0" unique_id=156776677]
+[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(396821489, 541500849) index="0" unique_id=850940143]
 surface_material_override/0 = ExtResource("5_2brt4")
 
 [editable path="player_mesh"]

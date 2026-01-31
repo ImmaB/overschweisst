@@ -15,5 +15,14 @@ static func create(parent: Node3D, _global_position: Vector3, radius: float) -> 
 	return weld_spot
 
 func weld_to(body: Node3D) -> void:
-	_pin_joint_3d.node_a = get_parent().get_path()
+	var parent := get_parent() as Node3D
+	_pin_joint_3d.node_a = parent.get_path()
 	_pin_joint_3d.node_b = body.get_path()
+	_remove_constant_forces(parent)
+	_remove_constant_forces(body)
+
+func _remove_constant_forces(body: Node3D) -> void:
+	var rigid_body := body as RigidBody3D
+	if rigid_body:
+		rigid_body.constant_force = Vector3.ZERO
+		rigid_body.constant_torque = Vector3.ZERO

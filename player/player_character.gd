@@ -16,10 +16,15 @@ var _gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity"
 
 var _move_direction: Vector2
 var _look_rotation: float
+var _fall_direction: float = 45
 
 func _ready():
+    GameManager.register_player(self)
     var vision_cone := VISION_CONE.instantiate()
     _vision_cone_position.add_child(vision_cone)
+
+func die() -> void:
+    GameManager.player_died(self)
 
 func set_movement(direction: Vector2) -> void:
     _move_direction = direction.normalized() if direction.length_squared() > 1.0 else direction
@@ -44,6 +49,12 @@ func _physics_process(delta: float) -> void:
     var velocity_z := move_toward(velocity.z, movement.y, acceleration * delta)
     velocity = Vector3(velocity_x, velocity.y, velocity_z) if on_floor else velocity + _gravity * delta
     rotation.y = lerp_angle(rotation.y, _look_rotation, turn_acceleration * delta)
+    if not on_floor: # look up/down while in air
+        rotation.x = lerp_angle(rotation.x, _fall_direction, turn_acceleration * delta)
+    elif rotation.x != 0.0:
+        if randf() < 0.5:
+            _fall_direction *= -1
+        rotation.x = lerp_angle(rotation.x, 0.0, turn_acceleration * delta)
     move_and_slide()
 
 func _calc_movement(move_direction: Vector2, on_floor: bool) -> Vector2:

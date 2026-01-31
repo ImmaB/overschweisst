@@ -12,6 +12,8 @@ func _input(event):
 
 	if Input.is_action_just_pressed("weld"):
 		controlled_player.start_welding()
+	if (Input.is_action_just_pressed("toggle_vision_cone")):
+		controlled_player.toggle_vision_cone()
 	if Input.is_action_just_released("weld"):
 		controlled_player.stop_welding()
 

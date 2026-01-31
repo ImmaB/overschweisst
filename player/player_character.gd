@@ -30,6 +30,9 @@ func die() -> void:
     _vision_cone.visible = false
     GameManager.player_died(self)
 
+func toggle_vision_cone() -> void:
+    _vision_cone.visible = not _vision_cone.visible
+
 func set_movement(direction: Vector2) -> void:
     _move_direction = direction.normalized() if direction.length_squared() > 1.0 else direction
 

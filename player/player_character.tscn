@@ -28,8 +28,8 @@ script = ExtResource("2_rkbax")
 controlled_player = NodePath("..")
 
 [node name="Welder" parent="." unique_id=96464349 instance=ExtResource("4_tncax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1326869)
-radius = 0.25
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6448562)
+radius = 0.2
 
 [node name="player_mesh" parent="." unique_id=396821489 instance=ExtResource("4_2brt4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028556287, 0)

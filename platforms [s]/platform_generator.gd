@@ -1,0 +1,94 @@
+extends Area3D
+
+@onready var vol = $CollisionShape3D
+@export var spawnee: PackedScene
+@export var maxForce: Vector3
+@export var minForce: Vector3
+@export var maxTorque: Vector3
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func random_point(vol: CollisionShape3D) -> Vector3:
+	var shape = vol.shape as BoxShape3D
+	var relHalfSize = shape.size / 2
+	var randPos = Vector3(
+		randf_range(-relHalfSize.x, relHalfSize.x),
+		randf_range(0, 0),
+		randf_range(-relHalfSize.z, relHalfSize.z))
+	return vol.global_transform * randPos
+
+
+func random_torque(maxTorq: Vector3) -> Vector3:
+	var randTorq = Vector3(
+		randf_range(0, 0),
+		randf_range(-maxTorq.y, maxTorq.y),
+		randf_range(0, 0))
+	return randTorq
+	
+func random_force(maxForce: Vector3, minForce: Vector3) -> Vector3:
+	var randForce = Vector3(
+		randf_range(minForce.x, maxForce.x),
+		randf_range(0, 0),
+		randf_range(minForce.z, maxForce.z))
+	return randForce
+
+func spawnPlatform():
+	var maxTries := 0
+	while maxTries < 10:
+		maxTries += 1
+		var spawnPos := random_point(vol)
+		var forq := random_force(maxForce, minForce)
+		var torq := random_torque(maxTorque)
+		
+		var instancee = spawnee.instantiate()
+		instancee.global_position = spawnPos
+		var instCollisionShape = instancee.get_node("CollisionShape3D")
+		var instShapeCast = create_sensor_from_collision(instCollisionShape)
+		add_child(instShapeCast) 
+		instShapeCast.force_shapecast_update()
+		
+		if instShapeCast.is_colliding():
+			instancee.queue_free()
+			instShapeCast.queue_free()
+			continue
+		else:
+			instancee.constant_force = forq
+			instancee.angular_velocity = torq
+			get_tree().root.add_child(instancee)
+			break
+
+
+func _on_timer_timeout() -> void:
+	spawnPlatform()
+
+
+func create_sensor_from_collision(original_collision: CollisionShape3D) -> ShapeCast3D:
+	var sensor = ShapeCast3D.new()
+	
+	# 1. Copy the actual geometry (Box, Sphere, etc.)
+	sensor.shape = original_collision.shape
+	
+	# 2. Match the scale and rotation
+	sensor.basis = original_collision.basis
+	
+	# 3. CRITICAL: Set a tiny target_position so it actually "casts"
+	# If this is (0,0,0), the physics engine often ignores the check.
+	sensor.target_position = Vector3(0, 0.01, 0)
+	
+	# 4. Set the Collision Mask
+	# This ensures the sensor looks for the right things (e.g., Layer 1 for walls)
+	sensor.collision_mask = 1 
+	
+	# 5. Enable it
+	sensor.enabled = true
+	
+	return sensor

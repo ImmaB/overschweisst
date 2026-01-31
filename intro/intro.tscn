@@ -169,7 +169,7 @@ tracks/12/path = NodePath("mask/Silverscreen:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 10),
+"times": PackedFloat32Array(0, 9.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]

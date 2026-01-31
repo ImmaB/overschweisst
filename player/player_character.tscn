@@ -6,10 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d1f40cnbhp7qp" path="res://player/welder/welder.tscn" id="4_tncax"]
 [ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="5_2brt4"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
-radius = 0.25
-height = 1.0
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.25
 height = 1.0
@@ -20,21 +16,8 @@ turn_speed = 2.0
 acceleration = 5.0
 turn_acceleration = 5.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=986994085]
-<<<<<<< HEAD
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
-mesh = SubResource("CapsuleMesh_sh265")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.7246288, 0, 1, 0)
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("CapsuleMesh_sh265")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
->>>>>>> 359adaa64242c05cf9236823e5cf36c8f36e6f6f
 shape = SubResource("CapsuleShape3D_4flbx")
 
 [node name="VisionConePosition" type="Node3D" parent="." unique_id=1310239003]
@@ -46,12 +29,12 @@ controlled_player = NodePath("..")
 
 [node name="Welder" parent="." unique_id=96464349 instance=ExtResource("4_tncax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1326869)
-<<<<<<< HEAD
+radius = 0.25
 
 [node name="player_mesh" parent="." unique_id=1233777355 instance=ExtResource("4_2brt4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028556287, 0)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.028556287, 0)
 
-[node name="Skeleton3D" parent="player_mesh/Armature" parent_id_path=PackedInt32Array(1233777355, 314062048) index="0" unique_id=1604997218]
+[node name="Skeleton3D" parent="player_mesh/Armature" parent_id_path=PackedInt32Array(1233777355, 2122332069) index="0" unique_id=374658484]
 bones/0/position = Vector3(-0.74579304, 0.603879, 0.28228906)
 bones/0/rotation = Quaternion(4.59048e-05, -1.6900012e-07, 1, -6.5565104e-07)
 bones/0/scale = Vector3(0.9998958, 0.99988943, 0.99979347)
@@ -76,10 +59,7 @@ bones/20/rotation = Quaternion(-0.01665066, 5.4867996e-06, -0.02020357, 0.999657
 bones/21/rotation = Quaternion(0.941958, 5.9117454e-08, 0.3357307, -2.5312082e-07)
 bones/22/rotation = Quaternion(-0.016650682, -5.4719276e-06, 0.020203536, 0.9996573)
 
-[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" index="0" unique_id=1522145808]
+[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" index="0" unique_id=162575978]
 surface_material_override/0 = ExtResource("5_2brt4")
 
 [editable path="player_mesh"]
-=======
-radius = 0.25
->>>>>>> 359adaa64242c05cf9236823e5cf36c8f36e6f6f

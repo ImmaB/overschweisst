@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b3qfhr268u4yy"]
 
+[ext_resource type="Script" uid="uid://csxrpbguad7a4" path="res://level.gd" id="1_5kr82"]
 [ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
-[ext_resource type="PackedScene" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
-[ext_resource type="PackedScene" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
-[ext_resource type="PackedScene" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
+[ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
+[ext_resource type="PackedScene" uid="uid://dvjr5lri1v8gy" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
+[ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
@@ -37,6 +38,7 @@ size = Vector3(1, 5, 1)
 size = Vector3(1, 0.5, 1)
 
 [node name="Run River Run" type="Node" unique_id=854464559]
+script = ExtResource("1_5kr82")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
 environment = SubResource("Environment_642bm")
@@ -64,9 +66,6 @@ linear_damp = 0.2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=271216069]
 transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
 shape = SubResource("BoxShape3D_h8nvo")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=467133295]
-transform = Transform3D(0.7880103, -0.34427452, 0.5104065, 0, 0.82903683, 0.559194, -0.61566204, -0.44065064, 0.65328956, 2.9779289, 3.0164533, 3.236258)
 
 [node name="platform_2x1" parent="." unique_id=1993294131 instance=ExtResource("1_pcawa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2813464, 0, -5.5374947)

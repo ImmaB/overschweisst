@@ -38,7 +38,7 @@ shadow_mesh = SubResource("ArrayMesh_81i6t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7dk6"]
 resource_local_to_scene = true
-albedo_color = Color(0.58290184, 0.31100723, 0.30668592, 1)
+albedo_color = Color(0.26543692, 0.24457592, 0.29831737, 1)
 metallic = 1.0
 metallic_specular = 0.6
 roughness = 0.46

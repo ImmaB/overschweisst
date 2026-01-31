@@ -40,7 +40,7 @@ func stop_welding() -> void:
 
 func _weld() -> void:
 	var weld_spark: WeldSpark = WELD_SPARK.instantiate()
-	get_tree().root.add_child(weld_spark)
+	get_tree().current_scene.add_child(weld_spark)
 	weld_spark.global_position = global_position
 	if _current_energy < energy_per_weld:
 		weld_spark.spark(false)

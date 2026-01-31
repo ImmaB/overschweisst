@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://b3qfhr268u4yy"]
 
 [ext_resource type="Script" uid="uid://csxrpbguad7a4" path="res://core/level.gd" id="1_5kr82"]
-[ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="2_tfn42"]
-[ext_resource type="PackedScene" uid="uid://bpufv3nlchmcc" path="res://platforms/platform_1x1.tscn" id="3_oepwp"]
-[ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="4_188ai"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
-[ext_resource type="PackedScene" uid="uid://c2hmb8p1o2tt0" path="res://platforms/platform_2x2_circle.tscn" id="6_rt7cs"]
-[ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="7_3jjne"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms/platform_generator.tscn" id="7_tfn42"]
-[ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="8_4hxb6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_top_color = Color(0.589783, 0.37355348, 0.45932442, 1)
@@ -28,15 +22,6 @@ sky = SubResource("Sky_vcqsd")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h8nvo"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_dnqks"]
-resource_local_to_scene = true
-size = Vector3(1, 5, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ju5k5"]
-size = Vector3(1, 0.5, 1)
-
 [node name="Run River Run" type="Node" unique_id=854464559]
 script = ExtResource("1_5kr82")
 
@@ -44,11 +29,7 @@ script = ExtResource("1_5kr82")
 environment = SubResource("Environment_642bm")
 
 [node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("7_tfn42")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10730076, 0, -14.108998)
-spawnees = Array[PackedScene]([ExtResource("3_oepwp"), ExtResource("4_188ai"), ExtResource("5_kk24s"), ExtResource("6_rt7cs"), ExtResource("7_3jjne"), ExtResource("8_4hxb6")])
-maxForce = Vector3(0.5, 0, 2)
-minForce = Vector3(-0.5, 0, 1)
-maxTorque = Vector3(0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1870084777]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -56,44 +37,10 @@ shadow_enabled = true
 
 [node name="Floor" parent="." unique_id=1232690141 instance=ExtResource("2_tfn42")]
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1187250749]
-collision_layer = 2
-collision_mask = 2
-gravity_space_override = 3
-gravity_point_center = Vector3(0, 0, 1)
-gravity_direction = Vector3(0, 0, 1)
-gravity = 0.0
-linear_damp_space_override = 1
-linear_damp = 0.2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=271216069]
-transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
-shape = SubResource("BoxShape3D_h8nvo")
-
-[node name="platform_pillar" parent="." unique_id=744619268 instance=ExtResource("2_m5pyg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36820865, -9.536743e-07, -3.61949)
-
-[node name="platform_pillar2" parent="." unique_id=1772609740 instance=ExtResource("2_m5pyg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8223915, 0, -3.1911845)
-
 [node name="Platform" parent="." unique_id=197132205 instance=ExtResource("5_kk24s")]
 contact_monitor = false
 constant_force = Vector3(0, 0, 0)
-lifetime = 5.0
-
-[node name="platform_chunk" parent="." unique_id=1885625837 instance=ExtResource("4_6comq")]
-transform = Transform3D(0.9995713, 0.0042373613, 0.028970279, -0.0034871115, 0.99965847, -0.025898967, -0.029070128, 0.025786843, 0.9992447, -2.4735856, 0, 0.12155795)
-
-[node name="Schollen" type="Node3D" parent="." unique_id=1726990912]
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Schollen" unique_id=770514020]
-transform = Transform3D(0.8939275, 0, -0.4482116, 0, 1, 0, 0.4482116, 0, 0.8939275, -0.43035746, -0.0337826, 5.3060603)
-mesh = SubResource("BoxMesh_dnqks")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Schollen/MeshInstance3D8" unique_id=1677487445]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Schollen/MeshInstance3D8/StaticBody3D" unique_id=279881747]
-shape = SubResource("BoxShape3D_ju5k5")
+lifetime = 15.0
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)

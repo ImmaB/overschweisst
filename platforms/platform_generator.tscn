@@ -1,12 +1,23 @@
 [gd_scene format=3 uid="uid://u2d6cd27kn3r"]
 
 [ext_resource type="Script" uid="uid://7yrcftlclpm7" path="res://platforms/platform_generator.gd" id="1_8ckdc"]
+[ext_resource type="PackedScene" uid="uid://bpufv3nlchmcc" path="res://platforms/platform_1x1.tscn" id="2_8mf1f"]
+[ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="3_cbfdm"]
+[ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="4_oowyf"]
+[ext_resource type="PackedScene" uid="uid://c2hmb8p1o2tt0" path="res://platforms/platform_2x2_circle.tscn" id="5_sa6qw"]
+[ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="6_1qimk"]
+[ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="7_f1s5x"]
+[ext_resource type="PackedScene" uid="uid://bxc877272ibtl" path="res://platforms/platform_gear.tscn" id="8_yxc17"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_abu4y"]
-size = Vector3(10, 1, 5)
+size = Vector3(12, 1, 5)
 
 [node name="Platform Generator" type="Area3D" unique_id=235147658]
 script = ExtResource("1_8ckdc")
+spawnees = Array[PackedScene]([ExtResource("2_8mf1f"), ExtResource("3_cbfdm"), ExtResource("4_oowyf"), ExtResource("5_sa6qw"), ExtResource("6_1qimk"), ExtResource("7_f1s5x"), ExtResource("8_yxc17")])
+maxForce = Vector3(0.5, 0, 2)
+minForce = Vector3(-0.5, 0, 1)
+maxTorque = Vector3(0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1591549840]
 shape = SubResource("BoxShape3D_abu4y")

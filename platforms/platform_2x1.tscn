@@ -5,14 +5,25 @@
 [sub_resource type="BoxMesh" id="BoxMesh_iplba"]
 size = Vector3(2, 0.2, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cywh8"]
+resource_local_to_scene = true
+albedo_color = Color(0.26543692, 0.24457592, 0.29831737, 1)
+metallic = 1.0
+metallic_specular = 0.6
+roughness = 0.46
+emission_enabled = true
+emission = Color(1, 0.7997717, 0.12906846, 1)
+emission_energy_multiplier = 0.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_lp6hl"]
 size = Vector3(2, 0.2, 1)
 
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_cywh8")]
-mass = 2.0
+_mass = 2.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
 mesh = SubResource("BoxMesh_iplba")
+surface_material_override/0 = SubResource("StandardMaterial3D_cywh8")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
 shape = SubResource("BoxShape3D_lp6hl")

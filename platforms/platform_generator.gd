@@ -1,6 +1,7 @@
 extends Area3D
 
 @onready var vol = $CollisionShape3D
+@export var distance_to_player: float = 13.0
 @export var spawnees: Array[PackedScene] =  []
 #@export var spawnee: PackedScene
 @export var maxForce: Vector3
@@ -77,11 +78,12 @@ func _on_timer_timeout() -> void:
 
 
 func _adjust_position_to_players() -> void:
-	var x_position_sum = 0.0
+	var position_sum := Vector3.ZERO
 	for player in _player_characters:
-		x_position_sum += player.global_transform.origin.x
-	var average_x_position = x_position_sum / _player_characters.size()
-	position.x = average_x_position
+		position_sum += player.global_transform.origin
+	var average_position := position_sum / _player_characters.size()
+	position.x = average_position.x
+	position.z = average_position.z - distance_to_player
 
 
 func create_sensor_from_collision(original_collision: CollisionShape3D) -> ShapeCast3D:

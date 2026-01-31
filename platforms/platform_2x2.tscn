@@ -19,8 +19,8 @@ emission_energy_multiplier = 0.0
 size = Vector3(2, 0.2, 2)
 
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_slhg5")]
-mass = 4.0
 lifetime = 20.0
+_mass = 4.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
 mesh = SubResource("BoxMesh_iplba")

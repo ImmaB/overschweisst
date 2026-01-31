@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ck08ibnptw2ai"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
+friction = 0.0
+
+[sub_resource type="PrismMesh" id="PrismMesh_f5621"]
+size = Vector3(1.5, 2, 0.2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f5621"]
+data = PackedVector3Array(0, 1, 0.099999994, 0.75, -1, 0.099999994, -0.75, -1, 0.099999994, 0, 1, -0.099999994, -0.75, -1, -0.099999994, 0.75, -1, -0.099999994, 0, 1, 0.099999994, 0, 1, -0.099999994, 0.75, -1, 0.099999994, 0, 1, -0.099999994, 0.75, -1, -0.099999994, 0.75, -1, 0.099999994, 0, 1, -0.099999994, 0, 1, 0.099999994, -0.75, -1, -0.099999994, 0, 1, 0.099999994, -0.75, -1, 0.099999994, -0.75, -1, -0.099999994, -0.75, -1, 0.099999994, 0.75, -1, 0.099999994, -0.75, -1, -0.099999994, 0.75, -1, 0.099999994, 0.75, -1, -0.099999994, -0.75, -1, -0.099999994)
+
+[node name="platform_2x2" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
+collision_layer = 3
+collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_fhhbr")
+constant_force = Vector3(0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_f5621")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=404942175]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_f5621")

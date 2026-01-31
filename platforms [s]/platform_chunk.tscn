@@ -6,8 +6,8 @@ friction = 0.0
 [sub_resource type="BoxMesh" id="BoxMesh_iplba"]
 size = Vector3(1, 3, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_q1g3b"]
-size = Vector3(0.3, 3, 0.3)
+[sub_resource type="BoxShape3D" id="BoxShape3D_0to04"]
+size = Vector3(1, 3, 1)
 
 [node name="platform_chunk" type="RigidBody3D" unique_id=1319896732]
 collision_layer = 3
@@ -17,9 +17,10 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 30.0
 physics_material_override = SubResource("PhysicsMaterial_fhhbr")
+constant_force = Vector3(0, 0, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
 mesh = SubResource("BoxMesh_iplba")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=381292772]
-shape = SubResource("BoxShape3D_q1g3b")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1484632475]
+shape = SubResource("BoxShape3D_0to04")

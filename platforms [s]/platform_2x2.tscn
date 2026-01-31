@@ -17,6 +17,7 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 4.0
 physics_material_override = SubResource("PhysicsMaterial_fhhbr")
+constant_force = Vector3(0, 0, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
 mesh = SubResource("BoxMesh_iplba")

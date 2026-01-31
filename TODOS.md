@@ -4,6 +4,7 @@
 - Platformen schmelzen
 - Platformen Blockouts in verschiedenen Größen (S)
 - Platform Fließverhalten (S)
+  - reibungslos
 - Platform generation (S)
 - Grafik: Schweißer (M)
 - Grafik: Platform (M)

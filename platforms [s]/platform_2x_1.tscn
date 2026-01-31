@@ -6,7 +6,7 @@ size = Vector3(2, 0.2, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lp6hl"]
 size = Vector3(2, 0.2, 1)
 
-[node name="platform_2x1" type="RigidBody3D" unique_id=1319896732]
+[node name="platform_2x1" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
 collision_layer = 3
 collision_mask = 3
 axis_lock_linear_y = true

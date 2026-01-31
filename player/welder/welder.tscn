@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d1f40cnbhp7qp"]
+
+[ext_resource type="Script" uid="uid://don8kk4lh6a5c" path="res://player/welder/welder.gd" id="1_fyxcc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fyxcc"]
+radius = 1.0
+
+[node name="Welder" type="Area3D" unique_id=1232186631]
+script = ExtResource("1_fyxcc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1381095389]
+shape = SubResource("SphereShape3D_fyxcc")
+
+[node name="Timer" type="Timer" parent="." unique_id=1925295953]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1820351423]

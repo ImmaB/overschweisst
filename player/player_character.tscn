@@ -31,35 +31,10 @@ controlled_player = NodePath("..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1326869)
 radius = 0.25
 
-[node name="player_mesh" parent="." unique_id=1233777355 instance=ExtResource("4_2brt4")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.028556287, 0)
+[node name="player_mesh" parent="." unique_id=396821489 instance=ExtResource("4_2brt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.028556287, 0)
 
-[node name="Skeleton3D" parent="player_mesh/Armature" parent_id_path=PackedInt32Array(1233777355, 2122332069) index="0" unique_id=374658484]
-bones/0/position = Vector3(-0.74579304, 0.603879, 0.28228906)
-bones/0/rotation = Quaternion(4.59048e-05, -1.6900012e-07, 1, -6.5565104e-07)
-bones/0/scale = Vector3(0.9998958, 0.99988943, 0.99979347)
-bones/1/position = Vector3(-0.16257395, -4.263711e-09, 7.093698e-05)
-bones/2/position = Vector3(0.74579304, 0.603879, 0.28228906)
-bones/2/rotation = Quaternion(4.59048e-05, 1.6900012e-07, -1, -6.5565104e-07)
-bones/2/scale = Vector3(0.9998958, 0.99988943, 0.99979347)
-bones/3/position = Vector3(0.16257395, -4.263711e-09, 7.093698e-05)
-bones/5/position = Vector3(0, 0.059547715, 0)
-bones/7/rotation = Quaternion(-5.6583843e-08, -2.8418722e-07, 0.5946381, 0.8039935)
-bones/8/rotation = Quaternion(9.574404e-08, -5.851053e-09, 0.13305998, 0.991108)
-bones/9/rotation = Quaternion(-1.02883085e-07, -2.3446789e-07, 0.7558533, 0.65474105)
-bones/10/rotation = Quaternion(1.1635407e-08, -3.972334e-07, 0.86791563, 0.49671167)
-bones/11/rotation = Quaternion(8.518889e-08, 9.250023e-08, -0.5946381, 0.8039935)
-bones/12/rotation = Quaternion(9.574405e-08, 5.851074e-09, -0.13305998, 0.991108)
-bones/13/rotation = Quaternion(7.7326334e-08, 7.83654e-08, -0.7558533, 0.65474105)
-bones/14/rotation = Quaternion(2.1856263e-07, 2.7880824e-07, -0.86791563, 0.49671167)
-bones/16/rotation = Quaternion(0.2713025, -0.031806156, 0.030364882, 0.96148914)
-bones/18/rotation = Quaternion(0.2713025, 0.031806156, -0.030364882, 0.96148914)
-bones/19/rotation = Quaternion(0.94195807, -5.9117472e-08, -0.33573043, -2.5312082e-07)
-bones/20/rotation = Quaternion(-0.01665066, 5.4867996e-06, -0.02020357, 0.9996573)
-bones/21/rotation = Quaternion(0.941958, 5.9117454e-08, 0.3357307, -2.5312082e-07)
-bones/22/rotation = Quaternion(-0.016650682, -5.4719276e-06, 0.020203536, 0.9996573)
-
-[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" index="0" unique_id=162575978]
+[node name="Sphere" parent="player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(396821489, 1100811325) index="0" unique_id=156776677]
 surface_material_override/0 = ExtResource("5_2brt4")
 
 [editable path="player_mesh"]

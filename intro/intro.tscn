@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://c1dfpjlbvpill" path="res://checker.gdshader" id="2_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://c5d2ro5o2mowy" path="res://intro/mask.glb" id="3_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://bfi5uww7vk0ig" path="res://intro/torch.glb" id="4_pxqmo"]
+[ext_resource type="FontFile" uid="uid://bw7uv13yoywlx" path="res://media/Modak-Regular.ttf" id="4_sg2fo"]
 [ext_resource type="PackedScene" uid="uid://cdimfjmsoc6c2" path="res://player/welder/weld_spark.tscn" id="5_vyos2"]
 [ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="7_axcp6"]
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="8_sg2fo"]
@@ -2336,6 +2337,8 @@ size = Vector2(0.2, 0.1)
 transparency = 1
 albedo_color = Color(0.07, 0.07, 0.07, 0.98039216)
 
+[sub_resource type="SystemFont" id="SystemFont_sg2fo"]
+
 [node name="Intro" type="Node" unique_id=1955222766]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1118561970]
@@ -2377,6 +2380,24 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1
 mesh = SubResource("PlaneMesh_0a7ni")
 surface_material_override/0 = SubResource("ShaderMaterial_y72e6")
 
+[node name="Sprite3D" type="Sprite3D" parent="Wall" unique_id=1050348158]
+
+[node name="Schnittlurch" type="Label3D" parent="Wall" unique_id=752980083]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.0114172185, 0.19644499)
+pixel_size = 0.0005
+text = "Schnittlurch"
+font = ExtResource("4_sg2fo")
+font_size = 229
+outline_size = 64
+
+[node name="presents" type="Label3D" parent="Wall" unique_id=1582409192]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.011417222, 0.2707572)
+pixel_size = 0.0005
+text = "presents"
+font = ExtResource("4_sg2fo")
+font_size = 131
+outline_size = 64
+
 [node name="mask" parent="." unique_id=748177822 instance=ExtResource("3_vjsr4")]
 transform = Transform3D(1, 0, 0, 0, 0.97639793, 0.21597955, 0, -0.21597955, 0.97639793, 0, 0.9733205, 0.59782594)
 
@@ -2390,6 +2411,35 @@ transform = Transform3D(1, 0, 0, 0, -0.2588191, -0.9659259, 0, 0.9659259, -0.258
 visible = false
 mesh = SubResource("PlaneMesh_1q7h5")
 surface_material_override/0 = SubResource("StandardMaterial3D_a5lnx")
+
+[node name="overschweisst" type="Label3D" parent="mask" unique_id=45799558]
+transform = Transform3D(1, 0, 0, 0, 0.9763972, -0.21597937, 0, 0.21597937, 0.9763972, 0, 0.06976414, 0.04726541)
+pixel_size = 0.0001
+text = "overSchweißt"
+font = ExtResource("4_sg2fo")
+font_size = 256
+outline_size = 96
+
+[node name="a game about" type="Label3D" parent="mask" unique_id=1516030635]
+transform = Transform3D(1, 0, 0, 0, 0.97639716, -0.21597935, 0, 0.21597935, 0.97639716, 0, -0.012069464, 0.029163897)
+pixel_size = 0.0001
+text = "a game about welding things together
+by pressing \"A\" despite not seeing a thing
+ behind your welding mask
+"
+font = SubResource("SystemFont_sg2fo")
+font_size = 84
+outline_size = 48
+
+[node name="btw" type="Label3D" parent="mask" unique_id=94731020]
+transform = Transform3D(1, 0, 0, 0, 0.9763969, -0.21597935, 0, 0.21597935, 0.9763969, 0, -0.11781269, 0.0057736635)
+pixel_size = 0.0001
+text = "in case of emergency:
+STAY CALM!
+CONTINUE WELDING!"
+font = SubResource("SystemFont_sg2fo")
+font_size = 84
+outline_size = 48
 
 [node name="torch" parent="." unique_id=124444218 instance=ExtResource("4_pxqmo")]
 transform = Transform3D(0.560928, 0, 0.8278646, 0.72738296, 0.47751147, -0.49284565, -0.39531484, 0.8786255, 0.26784953, 0.33728078, 0.45564854, 0.83422744)

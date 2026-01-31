@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="8_4hxb6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.589783, 0.37355348, 0.45932442, 1)
+sky_horizon_color = Color(0.95293266, 0.56234956, 0.044859186, 1)
+sky_curve = 0.10980653
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
 [sub_resource type="Sky" id="Sky_vcqsd"]

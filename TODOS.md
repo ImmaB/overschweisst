@@ -3,8 +3,8 @@
 - der Schweiß (I) ✓
 - Kamera (I) ✓
 - Platformen schmelzen
-- Platformen Blockouts in verschiedenen Größen (S)
-- Platform Fließverhalten (S)
+- Platformen Blockouts in verschiedenen Größen (S) ✓
+- Platform Fließverhalten (S) ✓
   - reibungslos ✓
   - Fluss ✓
 - Platform generation (S) ✓

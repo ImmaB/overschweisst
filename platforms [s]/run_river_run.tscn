@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b8irp6bmubm54" path="res://platforms [s]/platform_2x_1.tscn" id="1_pcawa"]
 [ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="2_tfn42"]
-[ext_resource type="PackedScene" uid="uid://dvjr5lri1v8gy" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
 [ext_resource type="PackedScene" uid="uid://bpufv3nlchmcc" path="res://platforms/platform_1x1.tscn" id="3_oepwp"]
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
 [ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="4_188ai"]
@@ -91,8 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36820865, -9.536743e-07, -3
 [node name="platform_pillar2" parent="." unique_id=1772609740 instance=ExtResource("2_m5pyg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8223915, 0, -3.1911845)
 
-[node name="platform_centre" parent="." unique_id=100828305 instance=ExtResource("3_k81gr")]
-mass = 10.0
+[node name="Platform" parent="." unique_id=197132205 instance=ExtResource("5_kk24s")]
 constant_force = Vector3(0, 0, 0)
 
 [node name="platform_chunk" parent="." unique_id=1885625837 instance=ExtResource("4_6comq")]

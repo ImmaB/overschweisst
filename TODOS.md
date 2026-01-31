@@ -2,7 +2,7 @@
 
 - der Schweiß (I) ✓
 - Kamera (I) ✓
-- Platformen schmelzen (hald done)
+- Platformen schmelzen (half done)
 - Platformen Blockouts in verschiedenen Größen (S) ✓
 - Platform Fließverhalten (S) ✓
   - reibungslos ✓

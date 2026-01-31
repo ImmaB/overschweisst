@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bxag3ehj7kq7c"]
+
+[ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_jkt4n"]
+[ext_resource type="Shader" uid="uid://c1dfpjlbvpill" path="res://checker.gdshader" id="2_vjsr4"]
+[ext_resource type="PackedScene" uid="uid://c5d2ro5o2mowy" path="res://intro/mask.glb" id="3_vjsr4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0a7ni"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y72e6"]
+render_priority = 0
+shader = ExtResource("2_vjsr4")
+
+[node name="Intro" type="Node3D" unique_id=1271590676]
+
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=1564757540]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1281724131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76071274, 0.9074204)
+fov = 23.4
+near = 0.01
+
+[node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("1_jkt4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=863207284]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+mesh = SubResource("PlaneMesh_0a7ni")
+surface_material_override/0 = SubResource("ShaderMaterial_y72e6")
+
+[node name="mask" parent="." unique_id=748177822 instance=ExtResource("3_vjsr4")]
+transform = Transform3D(1, 0, 0, 0, 0.97639793, 0.21597955, 0, -0.21597955, 0.97639793, 0, 0.7218789, 0.59782594)

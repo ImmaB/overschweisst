@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bfi5uww7vk0ig"
-path="res://.godot/imported/torch.glb-d0f40ddadd5576b8099ef9cf225c7da8.scn"
+path="res://.godot/imported/torch.glb-28720563243b6421a8d9bc2812859e6e.scn"
 
 [deps]
 
-source_file="res://torch.glb"
-dest_files=["res://.godot/imported/torch.glb-d0f40ddadd5576b8099ef9cf225c7da8.scn"]
+source_file="res://intro/torch.glb"
+dest_files=["res://.godot/imported/torch.glb-28720563243b6421a8d9bc2812859e6e.scn"]
 
 [params]
 

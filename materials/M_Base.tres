@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="1_oo7gp"]
 
 [resource]
+resource_local_to_scene = true
 albedo_texture = ExtResource("1_oo7gp")

@@ -42,7 +42,7 @@ func set_look_direction(direction: Vector2) -> void:
     _look_rotation = atan2(direction.x, direction.y) - PI
 
 func stop_movement() -> void:
-    animation_player.play("ArmatureAction")
+    animation_player.stop()
     _move_direction = Vector2.ZERO
 
 func start_welding() -> void:
@@ -64,6 +64,10 @@ func _physics_process(delta: float) -> void:
         if randf() < 0.5:
             _fall_direction *= -1
         rotation.x = lerp_angle(rotation.x, 0.0, turn_acceleration * delta)
+    if animation_player.current_animation != "run":
+        animation_player.play("run")
+    animation_player.speed_scale = velocity.length() / movement_speed if on_floor else 1.0
+
     move_and_slide()
 
 func _calc_movement(move_direction: Vector2, on_floor: bool) -> Vector2:

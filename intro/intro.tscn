@@ -118,7 +118,7 @@ tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(2, 2, 0),
 "points": PackedFloat32Array(1, 0, 0, 0.33333334, 0, 1, 0, 0, 0.83166665, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5.01, 10)
+"times": PackedFloat32Array(0, 5.01, 20)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
@@ -129,7 +129,7 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(2, 2, 0),
 "points": PackedFloat32Array(-1, 0, 0, 0.33333334, 0, 0, 0, 0, 0.83166665, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5.01, 10)
+"times": PackedFloat32Array(0, 5.01, 20)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1183,6 +1183,54 @@ tracks/96/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/97/type = "value"
+tracks/97/imported = false
+tracks/97/enabled = true
+tracks/97/path = NodePath("WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/97/interp = 1
+tracks/97/loop_wrap = true
+tracks/97/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.385, 0.454, 0.55, 1), Color(0.385, 0.454, 0.55, 1), Color(0.49019608, 0.4509804, 0.19607843, 1)]
+}
+tracks/98/type = "value"
+tracks/98/imported = false
+tracks/98/enabled = true
+tracks/98/path = NodePath("WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/98/interp = 1
+tracks/98/loop_wrap = true
+tracks/98/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.66224277, 0.6717428, 0.6867428, 1), Color(0.66224277, 0.6717428, 0.6867428, 1), Color(0.9882353, 0.5058824, 0.45490196, 1)]
+}
+tracks/99/type = "value"
+tracks/99/imported = false
+tracks/99/enabled = true
+tracks/99/path = NodePath("ColorRect:visible")
+tracks/99/interp = 1
+tracks/99/loop_wrap = true
+tracks/99/keys = {
+"times": PackedFloat32Array(0, 28, 30),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/100/type = "value"
+tracks/100/imported = false
+tracks/100/enabled = true
+tracks/100/path = NodePath("ColorRect:modulate")
+tracks/100/interp = 1
+tracks/100/loop_wrap = true
+tracks/100/keys = {
+"times": PackedFloat32Array(0, 28, 30),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_1q7h5"]
@@ -2318,6 +2366,54 @@ tracks/94/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/95/type = "value"
+tracks/95/imported = false
+tracks/95/enabled = true
+tracks/95/path = NodePath("WorldEnvironment:environment:sky:sky_material:sky_top_color")
+tracks/95/interp = 1
+tracks/95/loop_wrap = true
+tracks/95/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.385, 0.454, 0.55, 1)]
+}
+tracks/96/type = "value"
+tracks/96/imported = false
+tracks/96/enabled = true
+tracks/96/path = NodePath("WorldEnvironment:environment:sky:sky_material:sky_horizon_color")
+tracks/96/interp = 1
+tracks/96/loop_wrap = true
+tracks/96/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.66224277, 0.6717428, 0.6867428, 1)]
+}
+tracks/97/type = "value"
+tracks/97/imported = false
+tracks/97/enabled = true
+tracks/97/path = NodePath("ColorRect:visible")
+tracks/97/interp = 1
+tracks/97/loop_wrap = true
+tracks/97/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/98/type = "value"
+tracks/98/imported = false
+tracks/98/enabled = true
+tracks/98/path = NodePath("ColorRect:modulate")
+tracks/98/interp = 1
+tracks/98/loop_wrap = true
+tracks/98/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5lnx"]
 _data = {
@@ -2859,6 +2955,16 @@ lifetime = 90.0
 transform = Transform3D(-0.24354732, 0, 0.96988916, 0, 1, 0, -0.96988916, 0, -0.24354732, -11.42201, 0, -25.165285)
 freeze = true
 lifetime = 90.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=111566348]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [editable path="Floor"]
 [editable path="WeldSpark"]

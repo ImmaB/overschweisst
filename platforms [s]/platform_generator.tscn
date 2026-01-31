@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://u2d6cd27kn3r"]
+
+[ext_resource type="Script" uid="uid://7yrcftlclpm7" path="res://platforms [s]/platform_generator.gd" id="1_8ckdc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_abu4y"]
+size = Vector3(20, 1, 5)
+
+[node name="Platform Generator" type="Area3D" unique_id=235147658]
+script = ExtResource("1_8ckdc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1591549840]
+shape = SubResource("BoxShape3D_abu4y")
+
+[node name="Timer" type="Timer" parent="." unique_id=92717857]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7f17mmbwq11s" path="res://platforms [s]/platform_pillar.tscn" id="2_m5pyg"]
 [ext_resource type="PackedScene" uid="uid://coi6f0gti32sw" path="res://platforms [s]/platform_2x2.tscn" id="3_k81gr"]
 [ext_resource type="PackedScene" uid="uid://bpv8w013rx570" path="res://platforms [s]/platform_chunk.tscn" id="4_6comq"]
+[ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms [s]/platform_generator.tscn" id="5_et1wb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,6 +38,13 @@ size = Vector3(1, 0.5, 1)
 
 [node name="Run River Run" type="Node" unique_id=854464559]
 
+[node name="Platform Generator" parent="." unique_id=235147658 instance=ExtResource("5_et1wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.645985)
+spawnee = ExtResource("1_pcawa")
+maxForce = Vector3(0.5, 0, 2)
+minForce = Vector3(-0.5, 0, 1)
+maxTorque = Vector3(0, 1, 0)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
 environment = SubResource("Environment_642bm")
 
@@ -50,7 +58,7 @@ shadow_enabled = true
 mesh = SubResource("PlaneMesh_e6tlm")
 surface_material_override/0 = SubResource("StandardMaterial3D_ju5k5")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1187250749]
+[node name="Area3D (obsolete)" type="Area3D" parent="." unique_id=1187250749]
 collision_layer = 2
 collision_mask = 2
 gravity_space_override = 3
@@ -60,12 +68,12 @@ gravity = 0.0
 linear_damp_space_override = 1
 linear_damp = 0.2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=271216069]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D (obsolete)" unique_id=271216069]
 transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
 shape = SubResource("BoxShape3D_h8nvo")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=467133295]
-transform = Transform3D(0.7880103, -0.34427452, 0.5104065, 0, 0.82903683, 0.559194, -0.61566204, -0.44065064, 0.65328956, 2.9779289, 3.0164533, 3.236258)
+transform = Transform3D(0.2461526, -0.7424747, 0.623009, 0, 0.6427869, 0.76604503, -0.9692311, -0.18856397, 0.15822364, 8.397727, 10.124384, 1.2147793)
 
 [node name="platform_2x1" parent="." unique_id=1993294131 instance=ExtResource("1_pcawa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2813464, 0, -5.5374947)

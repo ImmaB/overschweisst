@@ -1,8 +1,19 @@
 class_name WeldSpot
 extends Node3D
 
-@onready var _pin_joint_3d: PinJoint3D = $PinJoint3D
+const WELD_SPOT_SCENE: PackedScene = preload("res://player/welder/weld_spot.tscn")
 
-func weld_bodies(body_a: Node3D, body_b: Node3D) -> void:
-    _pin_joint_3d.node_a = body_a.get_path()
-    _pin_joint_3d.node_b = body_b.get_path()
+@onready var _pin_joint_3d: PinJoint3D = $PinJoint3D
+@onready var _mesh_instance_3d: MeshInstance3D = $MeshInstance3D
+
+static func create(parent: Node3D, _global_position: Vector3, radius: float) -> WeldSpot:
+	var weld_spot: WeldSpot = WELD_SPOT_SCENE.instantiate()
+	parent.add_child(weld_spot)
+	weld_spot.position = parent.to_local(_global_position)
+	weld_spot._mesh_instance_3d.mesh.radius = radius
+	weld_spot._mesh_instance_3d.mesh.height = radius * 2.0
+	return weld_spot
+
+func weld_to(body: Node3D) -> void:
+	_pin_joint_3d.node_a = get_parent().get_path()
+	_pin_joint_3d.node_b = body.get_path()

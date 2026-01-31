@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwtegtmkifdqt"
-path.s3tc="res://.godot/imported/gear_Gradient Pallete.png-7f7a6830b4698afea56e042b1ba45c56.s3tc.ctex"
+uid="uid://b0j4kfqqxcpwm"
+path.s3tc="res://.godot/imported/Gradient Pallete.png-616180667d3d5c539db9dcf987122ae0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "09ce4991aea43c9cbc1cd97fd8e45286"
-}
 
 [deps]
 
-source_file="res://gear_Gradient Pallete.png"
-dest_files=["res://.godot/imported/gear_Gradient Pallete.png-7f7a6830b4698afea56e042b1ba45c56.s3tc.ctex"]
+source_file="res://materials/Gradient Pallete.png"
+dest_files=["res://.godot/imported/Gradient Pallete.png-616180667d3d5c539db9dcf987122ae0.s3tc.ctex"]
 
 [params]
 

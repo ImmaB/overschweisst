@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://coi6f0gti32sw"]
+[gd_scene format=3 uid="uid://dvjr5lri1v8gy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
@@ -9,7 +9,7 @@ size = Vector3(2, 0.2, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6cxb"]
 size = Vector3(2, 0.2, 2)
 
-[node name="platform_2x2" type="RigidBody3D" unique_id=1319896732]
+[node name="platform_2x2" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
 collision_layer = 3
 collision_mask = 3
 axis_lock_linear_y = true

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b7hladk2xbimf"]
 
+[ext_resource type="Script" uid="uid://csxrpbguad7a4" path="res://level.gd" id="1_dnqks"]
 [ext_resource type="Material" uid="uid://be3bw88ru6smv" path="res://M_Base_Test.tres" id="1_ju5k5"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_vcqsd"]
 [ext_resource type="PackedScene" uid="uid://jwek3t3337q6" path="res://gear.glb" id="3_dnqks"]
@@ -109,6 +110,7 @@ size = Vector3(1, 0.5, 2)
 size = Vector3(1, 0.5, 2)
 
 [node name="Block River" type="Node" unique_id=854464559]
+script = ExtResource("1_dnqks")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
 environment = SubResource("Environment_642bm")
@@ -241,10 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7528214, 0, 5.7656384)
 [node name="Gear_001" parent="gear" index="0" unique_id=1848648117]
 surface_material_override/0 = ExtResource("1_ju5k5")
 
-[node name="Player" parent="." unique_id=751799812 instance=ExtResource("1_vcqsd")]
+[node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("1_vcqsd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6885159, 0)
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=11270234]
-transform = Transform3D(0.78099877, -0.51866066, 0.34789664, 0, 0.5570512, 0.8304782, -0.6245326, -0.6486024, 0.43505627, 3.0043309, 7.1717596, 3.7570157)
 
 [editable path="gear"]

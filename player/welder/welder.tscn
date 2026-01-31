@@ -3,14 +3,21 @@
 [ext_resource type="Script" uid="uid://don8kk4lh6a5c" path="res://player/welder/welder.gd" id="1_fyxcc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fyxcc"]
-radius = 1.0
+radius = 0.25
 
 [node name="Welder" type="Area3D" unique_id=1232186631]
 script = ExtResource("1_fyxcc")
+radius = 0.0
+energy_per_second = 20.0
+energy_per_weld = 10.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1381095389]
 shape = SubResource("SphereShape3D_fyxcc")
 
 [node name="Timer" type="Timer" parent="." unique_id=1925295953]
+
+[node name="RechargeTimer" type="Timer" parent="." unique_id=357140360]
+wait_time = 0.1
+autostart = true
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1820351423]

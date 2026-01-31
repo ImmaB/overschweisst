@@ -113,7 +113,7 @@ contact_monitor = true
 max_contacts_reported = 1
 constant_force = Vector3(0, 0, 1)
 script = ExtResource("1_64b0s")
-lifetime = 30.0
+lifetime = 20.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1417539165]
 mesh = SubResource("BoxMesh_avbr7")

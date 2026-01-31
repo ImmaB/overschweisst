@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_slhg5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iplba"]
-size = Vector3(2, 0.2, 2)
+size = Vector3(2, 0.4, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slhg5"]
 resource_local_to_scene = true
@@ -16,7 +16,7 @@ emission = Color(1, 0.7997717, 0.12906846, 1)
 emission_energy_multiplier = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6cxb"]
-size = Vector3(2, 0.2, 2)
+size = Vector3(2, 0.4, 2)
 
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_slhg5")]
 lifetime = 20.0

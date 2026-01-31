@@ -24,6 +24,7 @@ glow_enabled = true
 
 [node name="Run River Run" type="Node" unique_id=854464559]
 script = ExtResource("1_5kr82")
+survival_duration = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
 environment = SubResource("Environment_642bm")
@@ -40,10 +41,11 @@ shadow_enabled = true
 [node name="Platform" parent="." unique_id=197132205 instance=ExtResource("5_kk24s")]
 contact_monitor = false
 constant_force = Vector3(0, 0, 0)
-lifetime = 15.0
+lifetime = 10.0
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
 
 [node name="Platform2" parent="." unique_id=1319896732 instance=ExtResource("4_188ai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9394958, 0, -4.6109385)
+lifetime = 30.0

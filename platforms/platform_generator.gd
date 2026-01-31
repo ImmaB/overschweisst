@@ -1,17 +1,22 @@
+class_name PlatformGenerator
 extends Area3D
+
+const END_PLATFORM := preload("res://platforms/end_platform/end_platform.tscn")
 
 @onready var vol = $CollisionShape3D
 @export var distance_to_player: float = 13.0
 @export var spawnees: Array[PackedScene] =  []
+
 #@export var spawnee: PackedScene
 @export var maxForce: Vector3
 @export var minForce: Vector3
 @export var maxTorque: Vector3
 
-var _player_characters: Array[PlayerCharacter]
+@onready var timer: Timer = $Timer
+
 
 func _ready() -> void:
-	_player_characters = GameManager.get_player_characters()
+	GameManager.platform_generator = self
 
 
 func random_point(vol: CollisionShape3D) -> Vector3:
@@ -41,6 +46,12 @@ func random_force(maxForce: Vector3, minForce: Vector3) -> Vector3:
 func random_spawnee(spawnees: Array[PackedScene]) -> PackedScene:
 	var current_spawnee = spawnees.pick_random()
 	return current_spawnee
+
+func spawn_end_platform():
+	timer.stop()
+	var end_platform_instance = END_PLATFORM.instantiate()
+	end_platform_instance.global_position = global_position + Vector3(0, -10, 0)
+	get_tree().current_scene.add_child(end_platform_instance)
 
 func _spawnPlatform():
 	var maxTries := 0
@@ -79,9 +90,9 @@ func _on_timer_timeout() -> void:
 
 func _adjust_position_to_players() -> void:
 	var position_sum := Vector3.ZERO
-	for player in _player_characters:
+	for player in GameManager.player_characters:
 		position_sum += player.global_transform.origin
-	var average_position := position_sum / _player_characters.size()
+	var average_position := position_sum / GameManager.player_characters.size()
 	position.x = average_position.x
 	position.z = average_position.z - distance_to_player
 

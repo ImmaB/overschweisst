@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxag3ehj7kq7c"]
 
+[ext_resource type="Script" uid="uid://crqun01fajp8d" path="res://intro/intro.gd" id="1_1l24h"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="1_1q7h5"]
-[ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="1_jkt4n"]
 [ext_resource type="Shader" path="res://checker.gdshader" id="2_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://c5d2ro5o2mowy" path="res://intro/mask.glb" id="3_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://bfi5uww7vk0ig" path="res://intro/torch.glb" id="4_pxqmo"]
@@ -16,8 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bxc877272ibtl" path="res://platforms/platform_gear.tscn" id="13_rcqw2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pxqmo"]
-sky_top_color = Color(0.492324, 0.4549051, 0.20040274, 1)
-sky_horizon_color = Color(0.989214, 0.5081852, 0.45665646, 1)
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
 [sub_resource type="Sky" id="Sky_vyos2"]
@@ -1232,6 +1231,20 @@ tracks/100/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/101/type = "method"
+tracks/101/imported = false
+tracks/101/enabled = true
+tracks/101/path = NodePath(".")
+tracks/101/interp = 1
+tracks/101/loop_wrap = true
+tracks/101/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_switch_to_game_scene"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_1q7h5"]
 length = 0.001
@@ -2437,6 +2450,7 @@ albedo_color = Color(0.07, 0.07, 0.07, 0.98039216)
 [sub_resource type="SystemFont" id="SystemFont_sg2fo"]
 
 [node name="Intro" type="Node" unique_id=1955222766]
+script = ExtResource("1_1l24h")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1118561970]
 environment = SubResource("Environment_1q7h5")
@@ -2467,10 +2481,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76071274, 0.9074204)
 current = true
 fov = 26.0
 near = 0.01
-
-[node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("1_jkt4n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
 
 [node name="Wall" type="MeshInstance3D" parent="." unique_id=863207284]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)

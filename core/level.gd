@@ -10,8 +10,6 @@ var _win_timer: Timer
 func _ready():
 	var camera: PlayerCamera = PLAYER_CAMERA.instantiate()
 	add_child(camera)
-	var player_characters := GameManager.player_characters
-	camera.set_targets(player_characters)
 	_win_timer = Timer.new()
 	_win_timer.wait_time = survival_duration
 	_win_timer.one_shot = true

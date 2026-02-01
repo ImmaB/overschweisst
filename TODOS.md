@@ -10,7 +10,7 @@
 - Platform generation (S) ✓
 - Grafik: Schweißer (M)
 - Grafik: Platform (M)
-- ein Spielziel
+- ein Spielziel ✓
 
 # Nice to have
 
@@ -23,5 +23,5 @@
 
 # Wenn Zeit ist
 
-- Intro
+- Intro ✓ (Wand austauschen)
 - besserer Sichtkegeleffekt

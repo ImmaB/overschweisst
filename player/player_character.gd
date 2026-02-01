@@ -1,5 +1,5 @@
 class_name PlayerCharacter
-extends StairsCharacter3D
+extends StairsCharacter
 
 const VISION_CONE := preload("res://player/vision_cone.tscn")
 
@@ -70,6 +70,7 @@ func _physics_process(delta: float) -> void:
 		if randf() < 0.5:
 			_fall_direction *= -1
 		rotation.x = lerp_angle(rotation.x, 0.0, turn_acceleration * delta)
+	desired_velocity = velocity
 	move_and_stair_step()
 	var platform = _ray_cast_3d.get_collider() as Platform
 	if platform:

@@ -7,27 +7,26 @@
 [ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="5_2brt4"]
 [ext_resource type="AudioStream" uid="uid://by5we1hj5bd7o" path="res://sounds/gurr.ogg" id="6_834sp"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
-radius = 0.3
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_834sp"]
 height = 0.8
+radius = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_834sp"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("5_2brt4")
 
-[node name="PlayerCharacter" type="StairsCharacter3D" unique_id=1051228541 node_paths=PackedStringArray("animation_player")]
-collider = NodePath("CollisionShape3D")
-step_height_up = 5.0
-step_height_down = 5.0
+[node name="PlayerCharacter" type="CharacterBody3D" unique_id=1458530518 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("3_3w0fi")
 turn_speed = 2.0
 acceleration = 5.0
 turn_acceleration = 5.0
 animation_player = NodePath("player_mesh/AnimationPlayer")
+_step_height = 1.0
+metadata/_custom_type_script = "uid://ctsbfas80plki"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=922603066]
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=922603066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
-shape = SubResource("CapsuleShape3D_4flbx")
+shape = SubResource("CylinderShape3D_834sp")
 
 [node name="VisionConePosition" type="Node3D" parent="." unique_id=1310239003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6578144, 0)

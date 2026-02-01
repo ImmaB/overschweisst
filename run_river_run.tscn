@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="4_188ai"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
+[ext_resource type="PackedScene" uid="uid://bxc877272ibtl" path="res://platforms/platform_gear.tscn" id="7_ahym6"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms/platform_generator.tscn" id="7_tfn42"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
@@ -112,3 +113,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Platform3" parent="." unique_id=242368714 instance=ExtResource("7_ahym6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4402173, 0, -3.4560661)

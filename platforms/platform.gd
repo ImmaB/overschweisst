@@ -13,6 +13,7 @@ extends RigidBody3D
 @onready var _timer: Timer = $Timer
 
 var _touched_player: bool = false
+var connected_platforms: Array[Platform] = []
 
 func _ready():
 	_timer.wait_time = lifetime

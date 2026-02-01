@@ -4,13 +4,18 @@
 [ext_resource type="Script" uid="uid://dfnx68jdv7t7l" path="res://player/player_character.gd" id="3_3w0fi"]
 [ext_resource type="PackedScene" uid="uid://c0n3c7ea7rpt1" path="res://player/player_mesh.glb" id="4_2brt4"]
 [ext_resource type="PackedScene" uid="uid://d1f40cnbhp7qp" path="res://player/welder/welder.tscn" id="4_tncax"]
-[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="5_2brt4"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="5_2brt4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.25
 height = 0.8
 
-[node name="PlayerCharacter" type="CharacterBody3D" unique_id=751799812 node_paths=PackedStringArray("animation_player")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_834sp"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("5_2brt4")
+
+[node name="PlayerCharacter" type="StairsCharacter3D" unique_id=1051228541 node_paths=PackedStringArray("animation_player")]
+collider = NodePath("CollisionShape3D")
 script = ExtResource("3_3w0fi")
 turn_speed = 2.0
 acceleration = 5.0
@@ -65,7 +70,7 @@ bones/21/rotation = Quaternion(0.941958, 5.669609e-08, 0.3357307, -2.5312076e-07
 bones/22/rotation = Quaternion(0.2125658, 0.013439402, 0.20812856, 0.9546297)
 
 [node name="Sphere" parent="player_mesh/Armature/Skeleton3D" index="0" unique_id=808331076]
-surface_material_override/0 = ExtResource("5_2brt4")
+surface_material_override/0 = SubResource("StandardMaterial3D_834sp")
 
 [node name="mask" parent="player_mesh" index="1" unique_id=1318849900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8236714e-18, -0.030731084, 0.0021950777)

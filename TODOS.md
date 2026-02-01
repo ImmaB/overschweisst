@@ -22,7 +22,7 @@
 - Title screen ✓
 - Platform wobble 
 - schweißpunkt im Dunkeln ✓
-- Menü controller buttons: try again / restart game
+- Menü controller buttons: try again / restart game ✓
 - tutorial im killscreen ✓
 
 

@@ -31,3 +31,14 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=714357516]
 layout_mode = 2
 text = "Try again"
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=417694246]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "
+...remember:
+weld platforms together by pressing \"A\" (\"X\" on PS)
+walk around using the left thumbstick
+don't fall into the lava!"
+horizontal_alignment = 1
+vertical_alignment = 1

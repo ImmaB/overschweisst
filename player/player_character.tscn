@@ -16,8 +16,8 @@ albedo_texture = ExtResource("5_2brt4")
 
 [node name="PlayerCharacter" type="StairsCharacter3D" unique_id=1051228541 node_paths=PackedStringArray("animation_player")]
 collider = NodePath("CollisionShape3D")
-step_height_up = 0.75
-step_height_down = 0.75
+step_height_up = 5.0
+step_height_down = 5.0
 script = ExtResource("3_3w0fi")
 turn_speed = 2.0
 acceleration = 5.0

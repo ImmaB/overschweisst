@@ -11,24 +11,25 @@
 - Grafik: Schweißer (M) ✓
 - Grafik: Platform (M) ✓
 - ein Spielziel ✓
-- Spielfluss, der Szenen verbindet 
+- Spielfluss, der Szenen verbindet ✓
+- Build 
 
 # Nice to have
 
 - Schweiß Energy ✓
-- Sounds 
+- Sounds ✓
 - Musik 
 - Title screen ✓
-- Platform wobble
+- Platform wobble 
 - schweißpunkt im Dunkeln ✓
 - Menü controller buttons: try again / restart game
-- tutorial im killscreen
+- tutorial im killscreen ✓
 
 
 # Wenn Zeit ist
 
 - Intro ✓ (Wand austauschen)
   - Film 
-  - Materialien 
-  - Wand 
+  - Materialien ✓
+  - Wand ✓
 - besserer Sichtkegeleffekt 

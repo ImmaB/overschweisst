@@ -6,7 +6,7 @@ uniform vec4 light_lava_color : source_color;
 uniform float speed : hint_range(0.0, 5.0);
 uniform float scale : hint_range(0.1, 2000.0) = 10;
 uniform float sharpness : hint_range(1.0, 100.0); 
-uniform float emission_intensity : hint_range(0.0, 10.0);
+uniform float emission_intensity : hint_range(0.0, 20.0);
 
 vec2 random2D(vec2 p) {
     return fract(sin(vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3)))) * 43758.5453);

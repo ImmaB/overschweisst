@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0s3k71u4ug1o" path="res://platforms/platform_2x1.tscn" id="4_188ai"]
 [ext_resource type="PackedScene" uid="uid://b7o4bqvjfedt2" path="res://player/player_character.tscn" id="5_et1wb"]
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
-[ext_resource type="PackedScene" uid="uid://bxc877272ibtl" path="res://platforms/platform_gear.tscn" id="7_ahym6"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="6_ahym6"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms/platform_generator.tscn" id="7_tfn42"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
@@ -20,8 +20,23 @@ sky_material = SubResource("ProceduralSkyMaterial_e6tlm")
 [sub_resource type="Environment" id="Environment_642bm"]
 background_mode = 2
 sky = SubResource("Sky_vcqsd")
-tonemap_mode = 2
+tonemap_mode = 3
+tonemap_exposure = 1.11
+tonemap_agx_contrast = 1.5
+ssao_enabled = true
+ssao_intensity = 3.0
 glow_enabled = true
+fog_light_color = Color(0.7038597, 0.49080366, 0.4237176, 1)
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(1, 0.72176117, 0.7371943, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1evca"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("6_ahym6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tvem"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("6_ahym6")
 
 [sub_resource type="Animation" id="Animation_g6vup"]
 length = 0.001
@@ -83,7 +98,8 @@ environment = SubResource("Environment_642bm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1870084777]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(0.9987804, -0.04275793, 0.024686247, 2.7805946e-08, 0.49999994, 0.86602545, -0.049372554, -0.8649693, 0.49939016, 0, 2.7664866, 0)
+light_color = Color(1, 0.916, 0.79, 1)
 shadow_enabled = true
 
 [node name="Floor" parent="." unique_id=1232690141 instance=ExtResource("2_tfn42")]
@@ -95,6 +111,22 @@ constant_force = Vector3(0, 0, 0)
 lifetime = 10.0
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
+
+[node name="Sphere" parent="PlayerCharacter/player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(751799812, 1627804996, 1186866186) index="0" unique_id=139920647]
+surface_material_override/0 = SubResource("StandardMaterial3D_1evca")
+
+[node name="mask" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="1" unique_id=1204330400]
+surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+
+[node name="Cable" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="2" unique_id=706819217]
+surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+
+[node name="Machine" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="3" unique_id=836245821]
+surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+
+[node name="Torch" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="4" unique_id=322089775]
+surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
 
 [node name="Platform2" parent="." unique_id=1319896732 instance=ExtResource("4_188ai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9394958, 0, -4.6109385)
@@ -113,5 +145,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Platform3" parent="." unique_id=242368714 instance=ExtResource("7_ahym6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4402173, 0, -3.4560661)
+[editable path="PlayerCharacter"]
+[editable path="PlayerCharacter/player_mesh"]

@@ -12,7 +12,7 @@
 - Grafik: Platform (M) ✓
 - ein Spielziel ✓
 - Spielfluss, der Szenen verbindet ✓
-- Build 
+- Build ✓
 
 # Nice to have
 

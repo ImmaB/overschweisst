@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://0s3k71u4ug1o"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_cywh8"]
-[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_iwfwp"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="2_iwfwp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a5sk"]
 
@@ -37,16 +37,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_varp6")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_iwfwp"]
-size = Vector3(1.6262207, 0.3494568, 1.0439453)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kys3k"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_iwfwp")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d0t8b"]
+points = PackedVector3Array(-0.76998097, -0.30345878, -0.6177109, -0.7703036, -0.3035502, 0.6158518, -0.8355389, 0.22660476, 0.5635643, 0.8102081, 0.19432858, -0.630133, 0.7942532, -0.30344775, -0.6176843, -0.8355389, 0.22660476, -0.5656438, 0.794496, -0.3035416, 0.6158311, 0.8102081, 0.19432858, 0.6280535, 1.1650343, 0.065223895, 0.43445647, -0.90003437, 0.032894023, -0.5656438, 1.0036945, 0.16205242, -0.5333992, 0.7953976, 0.20845833, 0.5262155, -0.90003437, 0.032894023, 0.5635643, -0.79300606, 0.09106834, 0.6313646, 0.8102081, 0.12977624, -0.66250706, 1.1650343, 0.16205242, 0.53131974, -0.79121894, 0.09080036, -0.63222295, 0.79440457, 0.2080746, -0.52750516, 1.0036945, 0.032894023, -0.5011546, 1.1650343, 0.065223895, 0.5635643, 1.0036945, 0.065223895, -0.5333992, 1.1650343, 0.16205242, 0.46670106, 0.80587226, 0.08998585, 0.62643194, -0.796852, 0.1536692, -0.60499173, -0.79812664, 0.1539454, 0.60374063, 1.1650343, 0.12977624, 0.43445647)
 
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_cywh8")]
 _mass = 2.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006847501, -0.04671365, 0.004421711)
 mesh = SubResource("ArrayMesh_1dcmh")
-surface_material_override/0 = ExtResource("2_iwfwp")
+surface_material_override/0 = SubResource("StandardMaterial3D_kys3k")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0639285, -0.0010986328, 0.03730774, -0.020911343)
-shape = SubResource("BoxShape3D_iwfwp")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0639285, 0.005748868, -0.009405911, -0.016489632)
+shape = SubResource("ConvexPolygonShape3D_d0t8b")

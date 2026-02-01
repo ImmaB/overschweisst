@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bpufv3nlchmcc"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_blms6"]
-[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_3iyfb"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="2_3iyfb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uesxw"]
 
@@ -37,6 +37,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_81i6t")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2avw"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_3iyfb")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_3iyfb"]
 size = Vector3(2.2309265, 0.20129395, 2.2058105)
 
@@ -44,11 +48,12 @@ size = Vector3(2.2309265, 0.20129395, 2.2058105)
 _mass = 6.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018643141, -0.14467898, 0.018047571)
 mesh = SubResource("ArrayMesh_kcrqi")
-surface_material_override/0 = ExtResource("2_3iyfb")
+surface_material_override/0 = SubResource("StandardMaterial3D_k2avw")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38838196, 0.16156006, 0.36047363)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39024627, 0.016881078, 0.3785212)
 shape = SubResource("BoxShape3D_3iyfb")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="2" unique_id=1206136988]

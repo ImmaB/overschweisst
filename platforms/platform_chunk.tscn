@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://btrhfdusgxds2"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_t481g"]
-[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_tm4c8"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="2_tm4c8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2ofy"]
 
@@ -37,6 +37,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wl3is")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q5jlq"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_tm4c8")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0to04"]
 size = Vector3(1, 0.20002747, 1)
 
@@ -44,9 +48,10 @@ size = Vector3(1, 0.20002747, 1)
 _mass = 8.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010641098, -0.15059912, 0.025503397)
 mesh = SubResource("ArrayMesh_rktbs")
-surface_material_override/0 = ExtResource("2_tm4c8")
+surface_material_override/0 = SubResource("StandardMaterial3D_q5jlq")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19771576, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010641098, 0.047116637, 0.025503397)
 shape = SubResource("BoxShape3D_0to04")

@@ -50,10 +50,10 @@ lifetime = 25.0
 _mass = 4.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1389147, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0022200346, -0.014776513, 0.004477501)
 mesh = SubResource("ArrayMesh_bufdw")
 surface_material_override/0 = SubResource("StandardMaterial3D_qeyem")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
-transform = Transform3D(1, 0, 0, 0, 0.9835948, 0, 0, 0, 1, 0, 0.14221174, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9835948, 0, 0, 0, 1, 0.0022200346, -0.011479482, 0.004477501)
 shape = SubResource("ConvexPolygonShape3D_qeyem")

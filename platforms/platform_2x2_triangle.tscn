@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://iflmcwfg3m8w"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_30fnj"]
+[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_pn51w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfnom"]
 
@@ -34,16 +35,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kia00")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7xd4"]
-resource_local_to_scene = true
-albedo_color = Color(0.26543692, 0.24457592, 0.29831737, 1)
-metallic = 1.0
-metallic_specular = 0.6
-roughness = 0.46
-emission_enabled = true
-emission = Color(1, 0.7997717, 0.12906846, 1)
-emission_energy_multiplier = 0.0
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pn51w"]
 points = PackedVector3Array(1.2427819, -0.06316288, 0.766695, 1.0423275, 0.15544063, 0.8085394, 1.2427819, -0.20995024, 0.766695, 0.5795764, 0.14622572, -0.52009094, 1.1489522, 0.15243575, 0.5849948, -0.6992801, 0.27393222, 1.1708167, -0.9357736, 0.047766507, 1.2202435, -0.9357736, -0.20995024, 1.2202435, 0.5582515, 0.24493533, 0.4392414, 0.56720793, -0.20995024, -0.5439619, 0.43691254, -0.20995024, -0.79671335, -0.002381146, -0.20995024, -1.6487668, -0.002381146, 0.2823959, -1.6487668, 0.49704885, 0.22600472, -0.67988604, 0.224303, 0.28264633, -0.20864487, 0.32858193, 0.2708773, -0.006162882, 0.66231716, 0.2073746, -0.35917246, -0.8686001, 0.29000822, 0.9874313, -0.11071181, -0.20995024, -1.6383759, -0.11071181, 0.29000822, -1.6383759, 0.056049228, 0.301627, -0.5349752)
 
@@ -52,7 +43,7 @@ _mass = 2.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
 mesh = SubResource("ArrayMesh_vyub8")
-surface_material_override/0 = SubResource("StandardMaterial3D_j7xd4")
+surface_material_override/0 = ExtResource("2_pn51w")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.003674984, 6.314994e-09)

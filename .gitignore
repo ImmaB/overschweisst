@@ -3,5 +3,4 @@
 .vscode/
 .build/
 /android/
-**/bin/**
 *.tmp

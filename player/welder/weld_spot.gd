@@ -16,9 +16,14 @@ static func create(parent: Node3D, _global_position: Vector3, radius: float) -> 
 
 func weld_to(body: Node3D) -> void:
 	var parent := get_parent() as Node3D
-	_pin_joint_3d.node_a = parent.get_path()
-	_pin_joint_3d.node_b = body.get_path()
-	var platform = body as Platform
-	if platform: platform.remove_forces()
-	platform = parent as Platform
-	if platform: platform.remove_forces()
+	var platform_a = body as Platform
+	var platform_b = parent as Platform
+	if not platform_a or not platform_b:
+		return
+	_pin_joint_3d.node_a = platform_a.get_path()
+	_pin_joint_3d.node_b = platform_b.get_path()
+	platform_a.remove_forces()
+	platform_b.remove_forces()
+	if platform_a and platform_b:
+		platform_a.connected_platforms.append(platform_b)
+		platform_b.connected_platforms.append(platform_a)

@@ -4,3 +4,4 @@
 .build/
 /android/
 *.tmp
+**/bin/*.debug.*

@@ -8,20 +8,20 @@
   - reibungslos ✓
   - Fluss ✓
 - Platform generation (S) ✓
-- Grafik: Schweißer (M)
-- Grafik: Platform (M)
+- Grafik: Schweißer (M) ✓
+- Grafik: Platform (M) ✓
 - ein Spielziel ✓
 
 # Nice to have
 
 - Schweiß Energy ✓
-- Sounds
-- Musik
-- Title screen
+- Sounds 
+- Musik 
+- Title screen ✓
 - Platform wobble
 - schweißpunkt im Dunkeln ✓
 
 # Wenn Zeit ist
 
 - Intro ✓ (Wand austauschen)
-- besserer Sichtkegeleffekt
+- besserer Sichtkegeleffekt 

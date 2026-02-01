@@ -69,8 +69,9 @@ func _physics_process(delta: float) -> void:
         if randf() < 0.5:
             _fall_direction *= -1
         rotation.x = lerp_angle(rotation.x, 0.0, turn_acceleration * delta)
-
     move_and_stair_step()
+    var current_contacts = get_colliding_bodies()
+    var platform = null
 
 func _calc_movement(move_direction: Vector2, on_floor: bool) -> Vector2:
     if move_direction.length_squared() < 0.01: return Vector2.ZERO

@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode shadows_disabled;
+render_mode ambient_light_disabled;
 
 uniform vec4 dark_lava_color : source_color;
 uniform vec4 light_lava_color : source_color;

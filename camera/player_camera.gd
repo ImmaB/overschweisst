@@ -9,7 +9,8 @@ func _process(delta):
 		return
 	var position_sum: Vector3 = Vector3.ZERO
 	for target in targets:
-		position_sum += target.global_transform.origin
+		if (is_instance_valid(target)):
+			position_sum += target.global_transform.origin
 	var average_position: Vector3 = position_sum / targets.size()
 	var to_target: Vector3 = average_position - global_transform.origin
 	var distance: float = to_target.length()

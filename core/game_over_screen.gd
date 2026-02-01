@@ -8,6 +8,7 @@ func _ready() -> void:
 	button.pressed.connect(_retry)
 	button2.pressed.connect(_restart)
 	get_tree().paused = true
+	GameManager.player_characters.clear()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("weld"):

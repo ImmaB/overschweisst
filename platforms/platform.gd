@@ -7,6 +7,7 @@ extends RigidBody3D
 @export var max_volume: float = 70.0
 @export var sound_velocity_factor: float = 2.25
 @export var sound_distance_factor: float = 2.25
+@export var max_stir: float = 10.0
 
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -27,6 +28,29 @@ func _start_melting() -> void:
 func remove_forces() -> void:
 	constant_force = Vector3.ZERO
 	angular_velocity = Vector3.ZERO
+
+func stir(position: Vector3) -> void:
+	var platforms: Array[Platform] = [self]
+	var current_platform := self
+	while true:
+		var found_platform: bool = false
+		for joint in current_platform.get_children():
+			if joint is Generic6DOFJoint3D:
+				var other_platform: Platform = joint.node_b.get_node_or_null() if joint.node_a == current_platform.get_path() else joint.node_a.get_node_or_null()
+				if other_platform and other_platform not in platforms:
+					platforms.append(other_platform)
+					current_platform = other_platform
+					found_platform = true
+					break
+		if not found_platform:
+			break
+	var center_of_mass: Vector3 = Vector3.ZERO
+	for platform in platforms:
+		center_of_mass += platform.global_transform.origin
+	center_of_mass /= platforms.size()
+	var direction: Vector3 = position - center_of_mass
+	for platform in platforms:
+		platform.constant_force.x = clamp(-direction.x, -max_stir, max_stir)
 
 func _collision(body: Node) -> void:
 	if not _touched_player and body is PlayerCharacter:

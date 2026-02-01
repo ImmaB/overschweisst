@@ -11,7 +11,7 @@
 radius = 0.3
 height = 0.8
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjqbx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_834sp"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("5_2brt4")
 
@@ -73,7 +73,7 @@ bones/21/rotation = Quaternion(0.941958, 5.669609e-08, 0.3357307, -2.5312076e-07
 bones/22/rotation = Quaternion(0.2125658, 0.013439402, 0.20812856, 0.9546297)
 
 [node name="Sphere" parent="player_mesh/Armature/Skeleton3D" index="0" unique_id=808331076]
-surface_material_override/0 = SubResource("StandardMaterial3D_rjqbx")
+surface_material_override/0 = SubResource("StandardMaterial3D_834sp")
 
 [node name="mask" parent="player_mesh" index="1" unique_id=1318849900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8236714e-18, -0.030731084, 0.0021950777)
@@ -89,5 +89,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00019799042, -0.0034034709
 
 [node name="DeathSound" type="AudioStreamPlayer3D" parent="." unique_id=1492929385]
 stream = ExtResource("6_834sp")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1735529072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20309758, 0)
 
 [editable path="player_mesh"]

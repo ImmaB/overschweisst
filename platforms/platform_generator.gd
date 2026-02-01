@@ -11,7 +11,8 @@ const END_PLATFORM := preload("res://platforms/end_platform/end_platform.tscn")
 @export var maxForce: Vector3
 @export var minForce: Vector3
 @export var maxTorque: Vector3
-@export var spawn_check_mask: int = 2
+@export var spawn_check_mask: int = 8
+@export var spawn_aabb_padding: float = 0.05
 
 @onready var timer: Timer = $Timer
 
@@ -52,29 +53,27 @@ func spawn_end_platform():
 	print("Spawning End Platform")
 	timer.stop()
 	var end_platform_instance = END_PLATFORM.instantiate()
-	end_platform_instance.global_position = global_position + Vector3(0, 0, -5)
+	end_platform_instance.global_position = global_position + Vector3(0, 0, -3)
 	get_tree().current_scene.add_child(end_platform_instance)
 
 func _spawnPlatform():
 	var max_tries := 10
 	var tries := 0
-	var spawned := false
 	while tries < max_tries:
 		tries += 1
 		var spawn_pos := random_point(vol)
 		var forq := random_force(maxForce, minForce)
 		var torq := random_torque(maxTorque)
 		var spawnee = random_spawnee(spawnees)
-		if is_instance_valid(spawnee) and _is_spawn_position_free(spawn_pos, spawnee):
-			var instancee = spawnee.instantiate()
-			instancee.constant_force = forq
-			instancee.angular_velocity = torq
-			instancee.global_position = spawn_pos
-			get_tree().current_scene.add_child(instancee)
-			spawned = true
-			break
-	if not spawned:
-		print("Failed to spawn platform after %d tries" % tries)
+		if not _is_spawn_position_free(spawn_pos, spawnee):
+			continue
+		var instancee: RigidBody3D = spawnee.instantiate()
+		instancee.constant_force = forq
+		instancee.angular_velocity = torq
+		instancee.global_position = spawn_pos
+		get_tree().current_scene.add_child(instancee)
+		return
+	print("Failed to spawn platform after %d tries" % tries)
 
 
 func _on_timer_timeout() -> void:
@@ -92,8 +91,9 @@ func _adjust_position_to_players() -> void:
 
 
 func _is_spawn_position_free(spawn_pos: Vector3, spawnee: PackedScene) -> bool:
-	var instancee = spawnee.instantiate()
+	var instancee: RigidBody3D = spawnee.instantiate()
 	instancee.global_position = spawn_pos
+	var base_transform := Transform3D(instancee.transform.basis, spawn_pos)
 
 	var shapes := _collect_collision_shapes(instancee)
 	if shapes.is_empty():
@@ -105,7 +105,7 @@ func _is_spawn_position_free(spawn_pos: Vector3, spawnee: PackedScene) -> bool:
 	for shape_node in shapes:
 		if shape_node.shape == null:
 			continue
-		var world_transform = instancee.global_transform * shape_node.transform
+		var world_transform = _get_world_transform_from_instance(base_transform, instancee, shape_node)
 		var shape_aabb = _aabb_transformed(_shape_get_aabb(shape_node.shape), world_transform)
 		if not has_aabb:
 			combined_aabb = shape_aabb
@@ -120,19 +120,24 @@ func _is_spawn_position_free(spawn_pos: Vector3, spawnee: PackedScene) -> bool:
 	var query_shape := BoxShape3D.new()
 	query_shape.size = combined_aabb.size
 
-	var params := PhysicsShapeQueryParameters3D.new()
-	params.shape = query_shape
-	params.transform = Transform3D(Basis.IDENTITY, combined_aabb.position + combined_aabb.size * 0.5)
-	params.exclude = [get_rid()]
-	params.collision_mask = spawn_check_mask
-	params.collide_with_areas = false
-	params.collide_with_bodies = true
-
-	var space_state := get_world_3d().direct_space_state
-	var hits := space_state.intersect_shape(params, 1)
+	var platforms := get_tree().get_nodes_in_group("weldable")
+	for platform in platforms:
+		if not (platform is Node3D):
+			continue
+		var platform_shapes := _collect_collision_shapes(platform)
+		for shape_node in platform_shapes:
+			if shape_node.shape == null:
+				continue
+			var world_transform := (shape_node as Node3D).global_transform
+			var platform_aabb := _aabb_transformed(_shape_get_aabb(shape_node.shape), world_transform)
+			var combined_test := _aabb_shrink_safe(combined_aabb, spawn_aabb_padding)
+			var platform_test := _aabb_shrink_safe(platform_aabb, spawn_aabb_padding)
+			if combined_test.intersects(platform_test):
+				instancee.queue_free()
+				return false
 
 	instancee.queue_free()
-	return hits.is_empty()
+	return true
 
 
 func _collect_collision_shapes(root: Node) -> Array[CollisionShape3D]:
@@ -149,6 +154,9 @@ func _collect_collision_shapes(root: Node) -> Array[CollisionShape3D]:
 
 func _shape_get_aabb(shape: Shape3D) -> AABB:
 	if shape is ConcavePolygonShape3D:
+		var debug_mesh := shape.get_debug_mesh()
+		if debug_mesh:
+			return debug_mesh.get_aabb()
 		var faces := (shape as ConcavePolygonShape3D).get_faces()
 		if faces.is_empty():
 			return AABB()
@@ -186,24 +194,20 @@ func _aabb_transformed(aabb: AABB, xform: Transform3D) -> AABB:
 	return out
 
 
-func create_sensor_from_collision(original_collision: CollisionShape3D) -> ShapeCast3D:
-	var sensor = ShapeCast3D.new()
-	
-	# 1. Copy the actual geometry (Box, Sphere, etc.)
-	sensor.shape = original_collision.shape
-	
-	# 2. Match the scale and rotation
-	sensor.basis = original_collision.basis
-	
-	# 3. CRITICAL: Set a tiny target_position so it actually "casts"
-	# If this is (0,0,0), the physics engine often ignores the check.
-	sensor.target_position = Vector3(0, 0.01, 0)
-	
-	# 4. Set the Collision Mask
-	# This ensures the sensor looks for the right things (e.g., Layer 1 for walls)
-	sensor.collision_mask = 1 
-	
-	# 5. Enable it
-	sensor.enabled = true
-	
-	return sensor
+func _aabb_shrink_safe(aabb: AABB, padding: float) -> AABB:
+	if padding <= 0.0:
+		return aabb
+	var shrunk := aabb.grow(-padding)
+	if shrunk.size.x <= 0.0 or shrunk.size.y <= 0.0 or shrunk.size.z <= 0.0:
+		return aabb
+	return shrunk
+
+
+func _get_world_transform_from_instance(base_transform: Transform3D, instancee: Node3D, shape_node: Node3D) -> Transform3D:
+	var xform := Transform3D.IDENTITY
+	var current: Node = shape_node
+	while current != null and current != instancee:
+		if current is Node3D:
+			xform = (current as Node3D).transform * xform
+		current = current.get_parent()
+	return base_transform * xform

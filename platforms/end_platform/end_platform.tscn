@@ -31,13 +31,15 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 mass = 10000.0
-linear_velocity = Vector3(0, 0, 5)
+contact_monitor = true
+max_contacts_reported = 16
+linear_velocity = Vector3(0, 0, 3.5)
 script = ExtResource("1_aloo1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1654592313]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722046e-05, -0.20655143, 0.047945023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12236595, -0.21940696, 0.069387436)
 mesh = SubResource("SphereMesh_3p6m7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=548400770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722046e-05, -0.20655143, 0.047945023)
+transform = Transform3D(0.9994694, -0.026834926, 0.018460346, 0.027548296, 0.9988381, -0.039539807, -0.01737783, 0.040027387, 0.99904746, -0.122, 0, 0.069)
 shape = SubResource("CylinderShape3D_pevc6")

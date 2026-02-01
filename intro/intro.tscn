@@ -31,6 +31,9 @@ background_mode = 2
 sky = SubResource("Sky_vyos2")
 tonemap_mode = 2
 glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(1, 0.45476794, 0.30384225, 1)
 
 [sub_resource type="Animation" id="Animation_vyos2"]
 resource_name = "Movie"

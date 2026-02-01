@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bxag3ehj7kq7c"]
 
-[ext_resource type="Script" uid="uid://crqun01fajp8d" path="res://intro/intro.gd" id="1_1l24h"]
+[ext_resource type="Script" path="res://intro/intro.gd" id="1_1l24h"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="1_1q7h5"]
-[ext_resource type="Shader" path="res://checker.gdshader" id="2_vjsr4"]
+[ext_resource type="Shader" uid="uid://c1dfpjlbvpill" path="res://checker.gdshader" id="2_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://c5d2ro5o2mowy" path="res://intro/mask.glb" id="3_vjsr4"]
 [ext_resource type="PackedScene" uid="uid://bfi5uww7vk0ig" path="res://intro/torch.glb" id="4_pxqmo"]
 [ext_resource type="FontFile" uid="uid://bw7uv13yoywlx" path="res://media/Modak-Regular.ttf" id="4_sg2fo"]
@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://iflmcwfg3m8w" path="res://platforms/platform_2x2_triangle.tscn" id="11_ao3yw"]
 [ext_resource type="PackedScene" uid="uid://btrhfdusgxds2" path="res://platforms/platform_chunk.tscn" id="12_dk8sq"]
 [ext_resource type="PackedScene" uid="uid://bxc877272ibtl" path="res://platforms/platform_gear.tscn" id="13_rcqw2"]
+[ext_resource type="AudioStream" uid="uid://bi4o8a3r7yjem" path="res://sounds/singing.ogg" id="15_ie2y0"]
+[ext_resource type="AudioStream" uid="uid://dfcc2mb0h6c7x" path="res://sounds/surprise.ogg" id="16_ao3yw"]
+[ext_resource type="AudioStream" uid="uid://c0bn7und815ws" path="res://sounds/steps_4s.ogg" id="16_dk8sq"]
+[ext_resource type="AudioStream" uid="uid://bs2c05nba4ojn" path="res://sounds/schweiss_1.ogg" id="18_rcqw2"]
+[ext_resource type="AudioStream" uid="uid://cum84m2jsc5is" path="res://sounds/thunder.ogg" id="19_rcqw2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pxqmo"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -1243,6 +1248,62 @@ tracks/101/keys = {
 "values": [{
 "args": [],
 "method": &"_switch_to_game_scene"
+}]
+}
+tracks/102/type = "method"
+tracks/102/imported = false
+tracks/102/enabled = true
+tracks/102/path = NodePath("Audiostreams/steps")
+tracks/102/interp = 1
+tracks/102/loop_wrap = true
+tracks/102/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/103/type = "method"
+tracks/103/imported = false
+tracks/103/enabled = true
+tracks/103/path = NodePath("Audiostreams/schweiss")
+tracks/103/interp = 1
+tracks/103/loop_wrap = true
+tracks/103/keys = {
+"times": PackedFloat32Array(8.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/104/type = "method"
+tracks/104/imported = false
+tracks/104/enabled = true
+tracks/104/path = NodePath("Audiostreams/singing")
+tracks/104/interp = 1
+tracks/104/loop_wrap = true
+tracks/104/keys = {
+"times": PackedFloat32Array(4.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/105/type = "method"
+tracks/105/imported = false
+tracks/105/enabled = true
+tracks/105/path = NodePath("Audiostreams/thunder")
+tracks/105/interp = 1
+tracks/105/loop_wrap = true
+tracks/105/keys = {
+"times": PackedFloat32Array(10.266666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
 }]
 }
 
@@ -2975,6 +3036,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Audiostreams" type="Node" parent="." unique_id=2049910878]
+
+[node name="singing" type="AudioStreamPlayer" parent="Audiostreams" unique_id=635021171]
+stream = ExtResource("15_ie2y0")
+
+[node name="steps" type="AudioStreamPlayer" parent="Audiostreams" unique_id=936422952]
+stream = ExtResource("16_dk8sq")
+
+[node name="surprise" type="AudioStreamPlayer" parent="Audiostreams" unique_id=827987830]
+stream = ExtResource("16_ao3yw")
+
+[node name="schweiss" type="AudioStreamPlayer" parent="Audiostreams" unique_id=1704173758]
+stream = ExtResource("18_rcqw2")
+
+[node name="thunder" type="AudioStreamPlayer" parent="Audiostreams" unique_id=303353759]
+stream = ExtResource("19_rcqw2")
 
 [editable path="Floor"]
 [editable path="WeldSpark"]

@@ -30,7 +30,11 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=714357516]
 layout_mode = 2
-text = "Try again"
+text = "Try again (A)"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=683241240]
+layout_mode = 2
+text = "Restart game"
 
 [node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=417694246]
 layout_mode = 2

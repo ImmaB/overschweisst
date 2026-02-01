@@ -5,6 +5,8 @@ const WELD_SPARK = preload("res://player/welder/weld_spark.tscn")
 
 @export var weld_interval: float = 0.2
 @export var min_distance: float = 0.2
+@export var empty_pitch: float = 2.0
+@export var empty_db: float = -20.0
 
 
 @export var radius: float = 0.25
@@ -19,6 +21,7 @@ var _current_energy: float
 @onready var _timer: Timer = $Timer
 @onready var _recharge_timer: Timer = $RechargeTimer
 @onready var _collision_shape: CollisionShape3D = $CollisionShape3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var is_welding:
 	get: return not _timer.is_stopped()
@@ -33,9 +36,13 @@ func _ready():
 func start_welding() -> void:
 	_timer.wait_time = weld_interval
 	_timer.start()
+	audio_stream_player_3d.pitch_scale = 1.0
+	audio_stream_player_3d.volume_db = 0.0
+	audio_stream_player_3d.play()
 	_weld()
 
 func stop_welding() -> void:
+	audio_stream_player_3d.stop()
 	_timer.stop()
 
 func _weld() -> void:
@@ -44,6 +51,8 @@ func _weld() -> void:
 	weld_spark.global_position = global_position
 	if _current_energy < energy_per_weld:
 		weld_spark.spark(false)
+		audio_stream_player_3d.pitch_scale = empty_pitch
+		audio_stream_player_3d.volume_db = empty_db
 		return
 	weld_spark.spark(true)
 	_current_energy -= energy_per_weld

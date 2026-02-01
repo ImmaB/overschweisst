@@ -16,6 +16,10 @@ func _input(event):
 		controlled_player.toggle_vision_cone()
 	if Input.is_action_just_released("weld"):
 		controlled_player.stop_welding()
+	
+	var key_event := event as InputEventKey
+	if key_event and key_event.pressed and key_event.keycode == Key.KEY_ESCAPE:
+		get_tree().quit()
 
 func _handle_movement_input():
 	var move_input: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")

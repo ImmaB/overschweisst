@@ -17,5 +17,6 @@ func player_died(player: PlayerCharacter) -> void:
 
 
 func _game_over() -> void:
+	await get_tree().create_timer(2.0).timeout
 	var game_over_screen = GAME_OVER_SCREEN.instantiate()
 	get_tree().current_scene.add_child(game_over_screen)

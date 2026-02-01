@@ -12,6 +12,7 @@ const VISION_CONE := preload("res://player/vision_cone.tscn")
 
 @onready var _welder: Welder = $Welder
 @onready var _vision_cone_position: Node3D = $VisionConePosition
+@onready var _death_sound: AudioStreamPlayer3D = $DeathSound
 var _vision_cone: Node3D
 
 var _gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
@@ -29,6 +30,7 @@ func die() -> void:
     velocity = Vector3.ZERO
     axis_lock_linear_y = true
     _vision_cone.visible = false
+    _death_sound.play()
     GameManager.player_died(self)
 
 func toggle_vision_cone() -> void:

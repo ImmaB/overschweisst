@@ -53,7 +53,7 @@ func spawn_end_platform():
 	print("Spawning End Platform")
 	timer.stop()
 	var end_platform_instance = END_PLATFORM.instantiate()
-	end_platform_instance.global_position = global_position + Vector3(0, 0, -3)
+	end_platform_instance.global_position = global_position + Vector3(0, 0, -5)
 	get_tree().current_scene.add_child(end_platform_instance)
 
 func _spawnPlatform():

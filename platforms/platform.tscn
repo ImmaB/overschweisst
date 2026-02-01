@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bqamn1k4h4db4" path="res://platforms/platform.gd" id="1_64b0s"]
 [ext_resource type="Material" uid="uid://bavbxd717i305" path="res://materials/M_Metal.tres" id="2_w7mls"]
+[ext_resource type="AudioStream" uid="uid://cdl7jidlf48yl" path="res://sounds/plonk_1.ogg" id="3_a7es2"]
 [ext_resource type="AudioStream" uid="uid://3i26il2kfcfh" path="res://sounds/plonk_3.ogg" id="3_avbr7"]
+[ext_resource type="AudioStream" uid="uid://cxj5t6s5wgf8o" path="res://sounds/plonk_2.ogg" id="4_qt4bt"]
+[ext_resource type="AudioStream" uid="uid://c6wgswnaedhb5" path="res://sounds/plonk_4.ogg" id="6_xhqsd"]
+[ext_resource type="AudioStream" uid="uid://vc8r7lax82n4" path="res://sounds/plonk_5.ogg" id="7_noyam"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
@@ -103,6 +107,14 @@ _data = {
 &"melt": SubResource("Animation_avbr7")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pj5ox"]
+streams_count = 5
+stream_0/stream = ExtResource("3_a7es2")
+stream_1/stream = ExtResource("4_qt4bt")
+stream_2/stream = ExtResource("3_avbr7")
+stream_3/stream = ExtResource("6_xhqsd")
+stream_4/stream = ExtResource("7_noyam")
+
 [node name="Platform" type="RigidBody3D" unique_id=1319896732 groups=["weldable"]]
 collision_layer = 3
 collision_mask = 3
@@ -131,6 +143,6 @@ one_shot = true
 libraries/ = SubResource("AnimationLibrary_0l1pk")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=464150551]
-stream = ExtResource("3_avbr7")
+stream = SubResource("AudioStreamRandomizer_pj5ox")
 
 [connection signal="body_entered" from="." to="." method="_collision"]

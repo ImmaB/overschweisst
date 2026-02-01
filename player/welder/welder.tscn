@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1f40cnbhp7qp"]
 
 [ext_resource type="Script" uid="uid://don8kk4lh6a5c" path="res://player/welder/welder.gd" id="1_fyxcc"]
+[ext_resource type="AudioStream" uid="uid://bs2c05nba4ojn" path="res://sounds/schweiss_1.ogg" id="2_f5n3y"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fyxcc"]
 radius = 0.25
@@ -21,3 +22,6 @@ wait_time = 0.1
 autostart = true
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1820351423]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1412054217]
+stream = ExtResource("2_f5n3y")

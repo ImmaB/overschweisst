@@ -13,11 +13,15 @@ config_version=5
 config/name="Overschweisst"
 run/main_scene="uid://bxag3ehj7kq7c"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://crpe76d5lwsoo"
 
 [autoload]
 
 GameManager="*uid://bfmm67cpwahwv"
+
+[display]
+
+window/size/mode=3
 
 [dotnet]
 

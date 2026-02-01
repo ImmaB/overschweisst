@@ -24,7 +24,7 @@ glow_enabled = true
 
 [node name="Run River Run" type="Node" unique_id=854464559]
 script = ExtResource("1_5kr82")
-survival_duration = 20.0
+survival_duration = 15.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101483654]
 environment = SubResource("Environment_642bm")

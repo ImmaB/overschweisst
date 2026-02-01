@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://b62pxoe8k4pph"]
+[gd_scene format=3 uid="uid://br4tt4xlpxkft"]
 
-[ext_resource type="Theme" uid="uid://2d6x5jy0q4r6" path="res://media/theme.tres" id="1_cotq2"]
-[ext_resource type="Script" uid="uid://d4bu2hsxf5av1" path="res://core/game_over_screen.gd" id="1_s53b7"]
+[ext_resource type="Theme" uid="uid://2d6x5jy0q4r6" path="res://media/theme.tres" id="1_38snp"]
+[ext_resource type="Script" uid="uid://dq85dpagghyms" path="res://core/win_screen.gd" id="2_38snp"]
 
-[node name="GameOverScreen" type="PanelContainer" unique_id=458626830]
+[node name="WinScreen" type="PanelContainer" unique_id=458626830]
 process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_cotq2")
-script = ExtResource("1_s53b7")
+theme = ExtResource("1_38snp")
+script = ExtResource("2_38snp")
 
 [node name="Panel" type="Panel" parent="." unique_id=90321513]
 layout_mode = 2
@@ -24,10 +24,10 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=839117453]
 layout_mode = 2
-text = "Game Over"
+text = "You did it!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=714357516]
 layout_mode = 2
-text = "Try again"
+text = "Play again"

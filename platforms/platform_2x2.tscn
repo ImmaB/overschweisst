@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://csxmsw3hd6rsj"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_slhg5"]
-[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_qeyem"]
+[ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="2_qeyem"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3jmhh"]
 
@@ -37,15 +37,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vgh3b")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6myb"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_qeyem")
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qeyem"]
 points = PackedVector3Array(-0.42634997, -0.0717, -0.90149826, 1.0123308, 0.13459949, 1.0173731, 0.5046039, 0.19814128, 0.95373183, -1.0189741, -0.08757302, 1.0173731, -1.0189741, 0.13462746, -0.4746159, 0.4725851, 0.13462746, -1.0143731, 1.0123308, -0.08754505, 1.0173731, -1.0189741, 0.13462746, 1.0173731, 0.89965725, -0.0717, -0.4216202, 1.0123308, 0.13459949, -0.47441703, -0.47922853, 0.13462746, -1.0143731, -0.5110485, 0.19814128, 0.95373183, -0.90612376, -0.0717, -0.42171413, 0.21626303, 0.17889999, -0.46538565, 0.41970655, -0.0717, -0.90149826, -0.2502685, 0.17889999, -0.43802306, -0.95553315, 0.16637039, 0.22364765, 0.8520454, 0.1585, -0.20490861, -0.95553315, 0.16637039, 0.66814184, 0.43619192, 0.17889999, -0.13582943, 0.8520454, 0.1585, 0.23729001, -0.22290643, 0.17889999, -0.46538565, -0.44266328, 0.17889999, -0.13582943, 0.24379717, 0.17889999, -0.43802306)
 
 [node name="Platform" unique_id=1319896732 instance=ExtResource("1_slhg5")]
+lifetime = 25.0
 _mass = 4.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
 mesh = SubResource("ArrayMesh_bufdw")
-surface_material_override/0 = ExtResource("2_qeyem")
+surface_material_override/0 = SubResource("StandardMaterial3D_f6myb")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
 shape = SubResource("ConvexPolygonShape3D_qeyem")

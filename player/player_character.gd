@@ -10,11 +10,13 @@ const VISION_CONE := preload("res://player/vision_cone.tscn")
 @export var turn_acceleration: float = 10.0
 @export var animation_player: AnimationPlayer
 
+@onready var controller: PlayerController = $PlayerController
 @onready var _welder: Welder = $Welder
 @onready var _vision_cone_position: Node3D = $VisionConePosition
 @onready var _death_sound: AudioStreamPlayer3D = $DeathSound
 @onready var _ray_cast_3d: RayCast3D = $RayCast3D
 
+var device_id: int
 var _vision_cone: Node3D
 var _gravity: Vector3 = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 

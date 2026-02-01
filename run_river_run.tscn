@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://csxmsw3hd6rsj" path="res://platforms/platform_2x2.tscn" id="5_kk24s"]
 [ext_resource type="Texture2D" uid="uid://b0j4kfqqxcpwm" path="res://materials/Gradient Pallete.png" id="6_ahym6"]
 [ext_resource type="PackedScene" uid="uid://u2d6cd27kn3r" path="res://platforms/platform_generator.tscn" id="7_tfn42"]
+[ext_resource type="Script" uid="uid://doibov350kl73" path="res://player/player_manager.gd" id="8_1evca"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e6tlm"]
 sky_top_color = Color(0.589783, 0.37355348, 0.45932442, 1)
@@ -30,11 +31,11 @@ fog_light_color = Color(0.7038597, 0.49080366, 0.4237176, 1)
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(1, 0.72176117, 0.7371943, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1evca"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tvem"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("6_ahym6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tvem"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ly5d"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("6_ahym6")
 
@@ -113,20 +114,20 @@ lifetime = 10.0
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
 
-[node name="Sphere" parent="PlayerCharacter/player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(751799812, 1627804996, 1186866186) index="0" unique_id=139920647]
-surface_material_override/0 = SubResource("StandardMaterial3D_1evca")
-
-[node name="mask" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="1" unique_id=1204330400]
+[node name="Sphere" parent="PlayerCharacter/player_mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(751799812, 1627804996, 143925837) index="0" unique_id=808331076]
 surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
 
-[node name="Cable" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="2" unique_id=706819217]
-surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+[node name="mask" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="1" unique_id=1318849900]
+surface_material_override/0 = SubResource("StandardMaterial3D_4ly5d")
 
-[node name="Machine" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="3" unique_id=836245821]
-surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+[node name="Cable" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="2" unique_id=978212850]
+surface_material_override/0 = SubResource("StandardMaterial3D_4ly5d")
 
-[node name="Torch" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="4" unique_id=322089775]
-surface_material_override/0 = SubResource("StandardMaterial3D_6tvem")
+[node name="Machine" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="3" unique_id=323584267]
+surface_material_override/0 = SubResource("StandardMaterial3D_4ly5d")
+
+[node name="Torch" parent="PlayerCharacter/player_mesh" parent_id_path=PackedInt32Array(751799812, 1627804996) index="4" unique_id=1286216383]
+surface_material_override/0 = SubResource("StandardMaterial3D_4ly5d")
 
 [node name="Platform2" parent="." unique_id=1319896732 instance=ExtResource("4_188ai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9394958, 0, -4.6109385)
@@ -144,6 +145,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="PlayerManager" type="Node" parent="." unique_id=1048021294 node_paths=PackedStringArray("_first_player")]
+script = ExtResource("8_1evca")
+_first_player = NodePath("../PlayerCharacter")
 
 [editable path="PlayerCharacter"]
 [editable path="PlayerCharacter/player_mesh"]

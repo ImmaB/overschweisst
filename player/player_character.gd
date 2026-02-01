@@ -49,6 +49,8 @@ func set_look_direction(direction: Vector2) -> void:
 
 func stop_movement() -> void:
 	animation_player.stop()
+	# if animation_player.current_animation != "idle":
+	# 	animation_player.play("idle")
 	_move_direction = Vector2.ZERO
 
 func start_welding() -> void:

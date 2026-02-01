@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://0s3k71u4ug1o"]
 
 [ext_resource type="PackedScene" uid="uid://hkole07awtcl" path="res://platforms/platform.tscn" id="1_cywh8"]
+[ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="2_iwfwp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a5sk"]
 
@@ -36,16 +37,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_varp6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cywh8"]
-resource_local_to_scene = true
-albedo_color = Color(0.26543692, 0.24457592, 0.29831737, 1)
-metallic = 1.0
-metallic_specular = 0.6
-roughness = 0.46
-emission_enabled = true
-emission = Color(1, 0.7997717, 0.12906846, 1)
-emission_energy_multiplier = 0.0
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_iwfwp"]
 size = Vector3(1.6262207, 0.3494568, 1.0439453)
 
@@ -54,7 +45,7 @@ _mass = 2.0
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=1417539165]
 mesh = SubResource("ArrayMesh_1dcmh")
-surface_material_override/0 = SubResource("StandardMaterial3D_cywh8")
+surface_material_override/0 = ExtResource("2_iwfwp")
 
 [node name="CollisionShape3D" parent="." index="1" unique_id=1775353590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0639285, -0.0010986328, 0.03730774, -0.020911343)

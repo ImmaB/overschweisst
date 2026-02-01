@@ -95,7 +95,6 @@ constant_force = Vector3(0, 0, 0)
 lifetime = 10.0
 
 [node name="PlayerCharacter" parent="." unique_id=751799812 instance=ExtResource("5_et1wb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065853745, 0)
 
 [node name="Platform2" parent="." unique_id=1319896732 instance=ExtResource("4_188ai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9394958, 0, -4.6109385)

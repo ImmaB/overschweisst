@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqamn1k4h4db4" path="res://platforms/platform.gd" id="1_64b0s"]
 [ext_resource type="Material" uid="uid://bavbxd717i305" path="res://materials/M_Metal.tres" id="2_w7mls"]
+[ext_resource type="AudioStream" uid="uid://3i26il2kfcfh" path="res://sounds/plonk_3.ogg" id="3_avbr7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhhbr"]
 friction = 0.0
@@ -128,5 +129,8 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1968748899]
 libraries/ = SubResource("AnimationLibrary_0l1pk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=464150551]
+stream = ExtResource("3_avbr7")
 
 [connection signal="body_entered" from="." to="." method="_collision"]

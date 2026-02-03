@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bxag3ehj7kq7c"]
 
-[ext_resource type="Script" path="res://intro/intro.gd" id="1_1l24h"]
+[ext_resource type="Script" uid="uid://crqun01fajp8d" path="res://intro/intro.gd" id="1_1l24h"]
 [ext_resource type="PackedScene" uid="uid://dguruepnhbo6x" path="res://floor/floor.tscn" id="1_1q7h5"]
 [ext_resource type="Material" uid="uid://d3lkfpl67dwol" path="res://materials/M_Base.tres" id="3_rcqw2"]
 [ext_resource type="FontFile" uid="uid://bw7uv13yoywlx" path="res://media/Modak-Regular.ttf" id="4_sg2fo"]
@@ -1398,7 +1398,7 @@ tracks/6/path = NodePath("Wall:position:x")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
@@ -1409,7 +1409,7 @@ tracks/7/path = NodePath("Wall:position:y")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
@@ -1420,8 +1420,8 @@ tracks/8/path = NodePath("Wall:position:z")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "value"
@@ -2659,7 +2659,7 @@ fov = 26.0
 near = 0.01
 
 [node name="Wall" type="MeshInstance3D" parent="." unique_id=863207284]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, -1)
 
 [node name="Platform" type="RigidBody3D" parent="Wall" unique_id=1319896732 groups=["weldable"]]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, -0.0004712055, 0, 0.0004712055, 0.99999976, 0, -0.33935475, 0.026679575)
@@ -2671,7 +2671,6 @@ axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_fhhbr")
 contact_monitor = true
 max_contacts_reported = 16
-constant_force = Vector3(0, 0, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall/Platform" unique_id=1417539165]
 mesh = SubResource("ArrayMesh_bufdw")

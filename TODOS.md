@@ -1,3 +1,14 @@
+# Wishlist
+
+- Intro kürzen (s)
+- Axi über Sichtkegel rendern (s)
+- Musik
+- besser abgemischte Geräuschkulisse (listener auf Player Character?)
+- transparenterer Multiplayer ("press to join" o.ä.)
+- Credits
+- collider fixen
+- auf Itch
+
 # Bare Necessities
 
 - der Schweiß (I) ✓
